@@ -28,7 +28,7 @@ export default function Header() {
 
   return (
     <>
-      <header className='shadow-md font-sans tracking-wide relative z-50'>
+      <header className='fixed top-0 left-0 w-full  text-white  shadow-md font-sans tracking-wide z-50'>
         
 
         <div className='flex flex-wrap items-center justify-between gap-4 px-10 py-4 bg-white min-h-[70px]'>
@@ -37,7 +37,7 @@ export default function Header() {
           </a>
 
           <div id="collapseMenu"
-            className='hidden lg:block lg:flex lg:gap-x-5'>
+            className='hidden lg:flex lg:gap-x-5'>
             <button id="toggleClose" className='lg:hidden fixed top-2 right-4 z-[100] rounded-full bg-white p-3'>
               <svg xmlns="http://www.w3.org/2000/svg" className="w-4 fill-black" viewBox="0 0 320.591 320.591">
                 <path

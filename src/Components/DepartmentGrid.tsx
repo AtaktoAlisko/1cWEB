@@ -10,11 +10,13 @@ const departments = [
   { name: "Для производства", icon: "🏭" },
   { name: "Для технического отдела", icon: "🔧" },
   { name: "Для склада", icon: "📦" },
+  { name: "Для ИТ отдела", icon: "🛠️" },
+  { name: "Для службы ИБ", icon: "👥" },
 ];
 
 const DepartmentGrid = () => {
   return (
-    <div className="grid grid-cols-2 gap-4 sm:grid-cols-3  lg:grid-cols-4 p-4 mx-[180px] mt-10 mb-20">
+    <div className="grid grid-cols-2 gap-4 p-4 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 2xl:grid-cols-6 mx-auto max-w-screen-xl mt-10 mb-20">
       {departments.map((dept, index) => (
         <div
           key={index}

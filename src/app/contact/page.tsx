@@ -7,7 +7,7 @@ const ContactUs = () => {
     <>
       <div className="relative min-h-screen bg-white md:bg-transparent mt-16 sm:px-2">
         <div className="container mx-auto px-4 py-8 relative z-10 md:grid md:grid-cols-2 md:gap-8 sm:px-4">
-          <div className="space-y-8 bg-white p-6 md:p-0 md:bg-transparent md:space-y-0">
+          <div className="space-y-8 bg-white p-6 md:p-0 md:bg-transparent md:space-y-0 mb-8">
             <div className="space-y-4">
               <div className="flex items-center space-x-4">
                 <Image src="/logo.png" alt="Phone" width={40} height={40} />
@@ -39,7 +39,6 @@ const ContactUs = () => {
                   style={{ border: 0 }}
                   allowFullScreen
                   aria-hidden="false"
-                  tabIndex="0"
                 ></iframe>
               </div>
               <div className="space-y-4">

@@ -12,8 +12,8 @@ import Footer from "../Components/Footer";
 export default function Home() {
   return (
     <>
-      {/* <Head /> */}
-      <Header />
+      {/* <Head /> looks bad imo*/}
+      {/* <Header /> added in layout.tsx */}
       <Carousel />
       <About />
       <h2 className="text-center text-4xl mt-10 mb-10">ПОЧЕМУ ВЫБИРАЮТ НАС</h2>
@@ -21,7 +21,7 @@ export default function Home() {
       <Info />
       <Statistic />
       <Reviews />
-      <Footer />
+      {/* <Footer /> added in layout.tsx */}
     </>
   );
 }

@@ -5,7 +5,6 @@ export default function About() {
   return (
     <>
       <div className="my-20 mx-4 sm:mx-10 md:mx-20 lg:mx-32 xl:mx-40 2xl:mx-52">
-        <h1 className="text-3xl sm:text-4xl text-center mb-10 sm:mb-16 md:mb-20 font-bold">О нас</h1>
         <div className="flex flex-col md:flex-row gap-10 md:gap-20">
           <div className="relative w-full md:w-1/2 h-96 md:h-auto">
             <Image src={astana} alt="oNas" layout="fill" objectFit="cover" className="rounded-lg shadow-lg" />

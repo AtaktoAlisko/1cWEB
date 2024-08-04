@@ -56,10 +56,10 @@ export default function Header() {
                 </a>
               </li>
               <li className='max-lg:border-b max-lg:py-3 px-3'>
-                <a href='javascript:void(0)' className='hover:text-[#a2382b] text-[#a2382b] block font-bold text-[15px]'>Главная</a>
+                <a href="/" className='hover:text-[#a2382b] text-[#333] block font-bold text-[15px]'>Главная</a>
               </li>
               <li className='max-lg:border-b max-lg:py-3 px-3'>
-                <a href='javascript:void(0)' className='hover:text-[#a2382b] text-[#333] block font-bold text-[15px]'>О нас</a>
+                <a href="/aboutus" className='hover:text-[#a2382b] text-[#333] block font-bold text-[15px]'>О нас</a>
               </li>
               <li className='max-lg:border-b max-lg:py-3 px-3'>
                 <a href='javascript:void(0)' className='hover:text-[#a2382b] text-[#333] block font-bold text-[15px]'>Продукты</a>
@@ -71,7 +71,7 @@ export default function Header() {
                 <a href='javascript:void(0)' className='hover:text-[#a2382b] text-[#333] block font-bold text-[15px]'>Выполненные проекты</a>
               </li>
               <li className='max-lg:border-b max-lg:py-3 px-3'>
-                <a href='javascript:void(0)' className='hover:text-[#a2382b] text-[#333] block font-bold text-[15px]'>Контакты</a>
+                <a href="/contact" className='hover:text-[#a2382b] text-[#333] block font-bold text-[15px]'>Контакты</a>
               </li>
             </ul>
           </div>

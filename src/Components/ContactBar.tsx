@@ -1,6 +1,6 @@
 import Image from "next/image";
 
-export default function Head() {
+export default function ContactBar() {
   return (
     <div className="bg-yellow-400 p-0.5 sm:px-[0px] md:px-[50px] text-center">
       <ul className="flex flex-col md:flex-row justify-between items-center text-amber-800 gap-1 lg:gap-2">

@@ -8,7 +8,7 @@ const stats = [
   { value: "20+", label: "Сотрудников" },
 ];
 
-const StatsDisplay = () => {
+const ProudNumbersBar = () => {
   return (
     <div className="bg-[#04395e]  text-white py-10 mb-10">
       <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-8 px-4">
@@ -23,4 +23,4 @@ const StatsDisplay = () => {
   );
 };
 
-export default StatsDisplay;
+export default ProudNumbersBar;

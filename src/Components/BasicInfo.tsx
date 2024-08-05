@@ -1,7 +1,7 @@
 import Image from "next/image";
 import astana from "../../public/astana.jpg";
 
-export default function About() {
+export default function BasicInfo() {
   return (
     <>
       <div className="my-20 mx-4 sm:mx-10 md:mx-20 lg:mx-32 xl:mx-40 2xl:mx-52">

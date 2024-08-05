@@ -14,7 +14,7 @@ const departments = [
   { name: "Для службы ИБ", icon: "👥" },
 ];
 
-const DepartmentGrid = () => {
+const EmojiGrid = () => {
   return (
     <div className="grid grid-cols-2 gap-4 p-4 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 2xl:grid-cols-6 mx-auto max-w-screen-xl mt-10 mb-20">
       {departments.map((dept, index) => (
@@ -30,4 +30,4 @@ const DepartmentGrid = () => {
   );
 };
 
-export default DepartmentGrid;
+export default EmojiGrid;

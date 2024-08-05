@@ -11,7 +11,7 @@ const InfoCart = [
   { name: "Для склада", icon: "📦" },
 ];
 
-export default function Info() {
+export default function ServicesCards() {
   return (
     <>
       <div className="grid grid-cols-1 md:grid-cols-3 gap-10 px-[200px] mb-16 ">

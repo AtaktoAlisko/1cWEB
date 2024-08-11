@@ -10,20 +10,20 @@ export default function ServicesCards() {
         {services.map((service, index) => (
           <div
             key={index}
-            className="group block rounded-lg bg-white shadow-lg transition-transform transform hover:scale-105 hover:shadow-xl dark:bg-surface-dark"
+            className="group block rounded-lg bg-white border border-[#A22823] shadow-lg transition-transform transform hover:scale-105 hover:shadow-2xl"
           >
             <a href={service.link}>
               <div className="overflow-hidden rounded-t-lg">
-              <Image
-  className="rounded-t-lg mx-auto transition-transform transform group-hover:scale-110 p-4"
-  src={service.image}
-  alt={service.alt}
-  width={300}
-  height={300}
-/>
+                <Image
+                  className="rounded-t-lg mx-auto transition-transform transform group-hover:scale-110 p-4"
+                  src={service.image}
+                  alt={service.alt}
+                  width={300}
+                  height={300}
+                />
               </div>
             </a>
-            <div className="p-6 text-gray-800 dark:text-gray-200">
+            <div className="p-6 text-gray-800">
               <h5 className="mb-2 text-xl font-semibold text-center">
                 {service.title}
               </h5>
@@ -33,7 +33,7 @@ export default function ServicesCards() {
               <div className="flex justify-center">
                 <button
                   type="button"
-                  className="inline-block rounded bg-primary px-6 py-2 text-xs font-medium uppercase leading-normal text-white shadow-md transition duration-150 ease-in-out hover:bg-primary-accent-300 focus:bg-primary-accent-300 focus:outline-none active:bg-primary-600 dark:shadow-black/30 dark:hover:shadow-dark-strong dark:focus:shadow-dark-strong dark:active:shadow-dark-strong"
+                  className="inline-block rounded bg-[#A22823] px-6 py-2 text-xs font-medium uppercase leading-normal text-white shadow-md transition duration-150 ease-in-out hover:bg-[#D13430] focus:bg-[#D13430] focus:outline-none active:bg-[#801614]"
                   data-twe-ripple-init
                   data-twe-ripple-color="light"
                 >

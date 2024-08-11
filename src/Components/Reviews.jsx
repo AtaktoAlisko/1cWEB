@@ -37,7 +37,7 @@ const Reviews = () => {
   };
 
   return (
-    <div className="container mx-auto px-4 py-8">
+    <div className="max-w-screen-lg mx-auto px-4 py-8">
       <h2 className="text-3xl font-bold mb-10 mt-10 text-center text-gray-800 dark:text-gray-200">
         Отзывы о нас
       </h2>
@@ -48,7 +48,9 @@ const Reviews = () => {
             className="bg-white dark:bg-gray-800 shadow-lg rounded-lg p-6 transition-all duration-300 ease-in-out"
           >
             <div className="flex items-center mb-4">
-              <div className="w-12 h-12 bg-gray-300 dark:bg-gray-600 rounded-full mr-4"></div>
+              <div className="w-12 h-12 bg-gray-300 dark:bg-gray-600 rounded-full mr-4">
+                {/* here */}
+              </div>
               <div>
                 <h4 className="font-bold text-lg text-gray-900 dark:text-gray-100">
                   {review.name}

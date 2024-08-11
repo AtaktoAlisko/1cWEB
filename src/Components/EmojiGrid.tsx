@@ -2,31 +2,36 @@
 import React from "react";
 
 const departments = [
-  { name: "Для руководителя", icon: "👨‍💼" },
-  { name: "Для бухгалтерии", icon: "📊" },
-  { name: "Для казначейства", icon: "💼" },
-  { name: "Для транспортного отдела", icon: "🚚" },
-  { name: "Для отдела закупки", icon: "🛒" },
-  { name: "Для производства", icon: "🏭" },
+  { name: "Комплексный подход", icon: "👨‍💼" },
+  { name: "Ответственность", icon: "📊" },
+  { name: "Большой проект", icon: "💼" },
+  { name: "Надежность", icon: "🚚" },
+  { name: "Квалификация специалистов", icon: "🛒" },
+  { name: "Опыт", icon: "🏭" },
   { name: "Для технического отдела", icon: "🔧" },
   { name: "Для склада", icon: "📦" },
-  { name: "Для ИТ отдела", icon: "🛠️" },
-  { name: "Для службы ИБ", icon: "👥" },
 ];
 
 const EmojiGrid = () => {
   return (
-    <div className="grid grid-cols-2 gap-4 p-4 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 2xl:grid-cols-6 mx-auto max-w-screen-xl mt-10 mb-20">
-      {departments.map((dept, index) => (
-        <div
-          key={index}
-          className="flex flex-col items-center justify-center bg-gray-100 p-4 rounded-lg shadow-md"
-        >
-          <div className="text-4xl mb-2">{dept.icon}</div>
-          <div className="text-center">{dept.name}</div>
-        </div>
-      ))}
-    </div>
+    <>
+      <h2 className="text-center text-3xl font-extrabold text-blue-800 mt-12 mb-12 sm:text-4xl md:text-5xl">
+        ПОЧЕМУ ВЫБИРАЮТ НАС
+      </h2>
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8 p-6 mx-auto max-w-screen-xl mt-12 mb-24">
+        {departments.map((dept, index) => (
+          <div
+            key={index}
+            className="flex flex-col items-center justify-center bg-white p-8 rounded-xl border border-blue-200 shadow-lg transition-transform transform hover:scale-105 hover:shadow-2xl"
+          >
+            <div className="text-6xl mb-4 text-blue-600">{dept.icon}</div>
+            <div className="text-xl font-bold text-gray-800 text-center">
+              {dept.name}
+            </div>
+          </div>
+        ))}
+      </div>
+    </>
   );
 };
 

@@ -1,5 +1,6 @@
-// components/Reviews.js
-import React from "react";
+"use client";
+
+import React, { useState } from "react";
 
 const reviews = [
   {
@@ -29,25 +30,45 @@ const reviews = [
 ];
 
 const Reviews = () => {
+  const [expanded, setExpanded] = useState(null);
+
+  const toggleExpand = (index) => {
+    setExpanded(expanded === index ? null : index);
+  };
+
   return (
-    <div className="container mx-[80px] px-4 py-8">
-      <h2 className="text-3xl font-bold mb-20 mt-10 text-center">
+    <div className="container mx-auto px-4 py-8">
+      <h2 className="text-3xl font-bold mb-10 mt-10 text-center text-gray-800 dark:text-gray-200">
         Отзывы о нас
       </h2>
-      <div className="grid  gap-6 sm:grid-cols-1 md:grid-cols-2">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
         {reviews.map((review, index) => (
-          <div key={index} className="bg-white shadow-md rounded-lg p-6 mb-4">
-            <div className="flex items-center mb-2">
-              <div className="w-10 h-10 bg-gray-200 rounded-full mr-3"></div>
+          <div
+            key={index}
+            className="bg-white dark:bg-gray-800 shadow-lg rounded-lg p-6 transition-all duration-300 ease-in-out"
+          >
+            <div className="flex items-center mb-4">
+              <div className="w-12 h-12 bg-gray-300 dark:bg-gray-600 rounded-full mr-4"></div>
               <div>
-                <h4 className="font-bold">{review.name}</h4>
+                <h4 className="font-bold text-lg text-gray-900 dark:text-gray-100">
+                  {review.name}
+                </h4>
                 <p className="text-gray-500 text-sm">{review.date}</p>
               </div>
             </div>
-            <p className="mb-4">{review.text}</p>
-            <a href={review.link} className="text-blue-500">
-              Перейти к отзыву
-            </a>
+            <p
+              className={`mb-4 transition-all duration-300 ease-in-out ${
+                expanded === index ? "line-clamp-none" : "line-clamp-3"
+              }`}
+            >
+              {review.text}
+            </p>
+            <button
+              onClick={() => toggleExpand(index)}
+              className="text-blue-600 dark:text-blue-400 hover:underline focus:outline-none"
+            >
+              {expanded === index ? "Свернуть" : "Развернуть"}
+            </button>
           </div>
         ))}
       </div>

@@ -12,6 +12,9 @@ module.exports = {
   ],
   theme: {
     extend: {},
+    // screens: {
+    //   smm: "360px",
+    // },
   },
   darkMode: "class",
   plugins: [require("tw-elements/plugin.cjs")],

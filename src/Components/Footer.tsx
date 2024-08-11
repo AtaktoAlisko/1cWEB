@@ -1,80 +1,122 @@
-
 import React from "react";
 import Image from "next/image";
 
 const Footer = () => {
   return (
-    <footer className="px-[150px] bg-[#04395e] text-white py-10">
-      <div className="container mx-[60px]">
+    <footer className="px-6 md:px-[100px] lg:px-[150px] bg-[#04395e] text-white py-12">
+      <div className="container mx-auto">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
           <div>
-            <h4 className="text-xl font-bold mb-4">О нас</h4>
-            <ul>
-              <li className="mb-2">
-                <a href="#">Наша команда</a>
+            <h4 className="text-2xl font-semibold mb-6 border-b-2 border-gray-400 pb-2">
+              О нас
+            </h4>
+            <ul className="space-y-3">
+              <li>
+                <a href="#" className="hover:text-gray-300 transition-colors">
+                  Наша команда
+                </a>
               </li>
-              <li className="mb-2">
-                <a href="#">Карьера</a>
+              <li>
+                <a href="#" className="hover:text-gray-300 transition-colors">
+                  Карьера
+                </a>
               </li>
-              <li className="mb-2">
-                <a href="#">Пресса</a>
+              <li>
+                <a href="#" className="hover:text-gray-300 transition-colors">
+                  Пресса
+                </a>
               </li>
-              <li className="mb-2">
-                <a href="#">Контакты</a>
-              </li>
-            </ul>
-          </div>
-          <div>
-            <h4 className="text-xl font-bold mb-4">Продукты</h4>
-            <ul>
-              <li className="mb-2">
-                <a href="#">Каталог</a>
-              </li>
-              <li className="mb-2">
-                <a href="#">Новые поступления</a>
-              </li>
-              <li className="mb-2">
-                <a href="#">Популярные товары</a>
-              </li>
-              <li className="mb-2">
-                <a href="#">Распродажа</a>
+              <li>
+                <a href="#" className="hover:text-gray-300 transition-colors">
+                  Контакты
+                </a>
               </li>
             </ul>
           </div>
           <div>
-            <h4 className="text-xl font-bold mb-4">Услуги</h4>
-            <ul>
-              <li className="mb-2">
-                <a href="#">Консультации</a>
+            <h4 className="text-2xl font-semibold mb-6 border-b-2 border-gray-400 pb-2">
+              Продукты
+            </h4>
+            <ul className="space-y-3">
+              <li>
+                <a href="#" className="hover:text-gray-300 transition-colors">
+                  Каталог
+                </a>
               </li>
-              <li className="mb-2">
-                <a href="#">Поддержка</a>
+              <li>
+                <a href="#" className="hover:text-gray-300 transition-colors">
+                  Новые поступления
+                </a>
               </li>
-              <li className="mb-2">
-                <a href="#">Доставка</a>
+              <li>
+                <a href="#" className="hover:text-gray-300 transition-colors">
+                  Популярные товары
+                </a>
               </li>
-              <li className="mb-2">
-                <a href="#">Гарантия</a>
+              <li>
+                <a href="#" className="hover:text-gray-300 transition-colors">
+                  Распродажа
+                </a>
               </li>
             </ul>
           </div>
           <div>
-            <h4 className="text-xl font-bold mb-4">Контакты</h4>
-            <ul>
-              <li className="mb-2">
-                <a href="#">Наш адрес</a>
+            <h4 className="text-2xl font-semibold mb-6 border-b-2 border-gray-400 pb-2">
+              Услуги
+            </h4>
+            <ul className="space-y-3">
+              <li>
+                <a href="#" className="hover:text-gray-300 transition-colors">
+                  Консультации
+                </a>
               </li>
-              <li className="mb-2">
-                <a href="#">Электронная почта</a>
+              <li>
+                <a href="#" className="hover:text-gray-300 transition-colors">
+                  Поддержка
+                </a>
               </li>
-              <li className="mb-2">
-                <a href="#">Телефон</a>
+              <li>
+                <a href="#" className="hover:text-gray-300 transition-colors">
+                  Доставка
+                </a>
               </li>
-              <li className="mb-2">
-                <a href="#">Социальные сети</a>
+              <li>
+                <a href="#" className="hover:text-gray-300 transition-colors">
+                  Гарантия
+                </a>
               </li>
             </ul>
           </div>
+          <div>
+            <h4 className="text-2xl font-semibold mb-6 border-b-2 border-gray-400 pb-2">
+              Контакты
+            </h4>
+            <ul className="space-y-3">
+              <li>
+                <a href="#" className="hover:text-gray-300 transition-colors">
+                  Наш адрес
+                </a>
+              </li>
+              <li>
+                <a href="#" className="hover:text-gray-300 transition-colors">
+                  Электронная почта
+                </a>
+              </li>
+              <li>
+                <a href="#" className="hover:text-gray-300 transition-colors">
+                  Телефон
+                </a>
+              </li>
+              <li>
+                <a href="#" className="hover:text-gray-300 transition-colors">
+                  Социальные сети
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div className="mt-10 border-t border-gray-400 pt-6 text-center text-sm text-gray-300">
+          © 2024 Softway All rights reserved.
         </div>
       </div>
     </footer>

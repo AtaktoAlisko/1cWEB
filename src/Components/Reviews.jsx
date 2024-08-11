@@ -38,21 +38,21 @@ const Reviews = () => {
 
   return (
     <div className="max-w-screen-lg mx-auto px-4 py-8">
-      <h2 className="text-3xl font-bold mb-10 mt-10 text-center text-gray-800 dark:text-gray-200">
+      <h2 className="text-center text-3xl font-extrabold text-[#A22823] mt-12 mb-12 sm:text-4xl md:text-5xl">
         Отзывы о нас
       </h2>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
         {reviews.map((review, index) => (
           <div
             key={index}
-            className="bg-white dark:bg-gray-800 shadow-lg rounded-lg p-6 transition-all duration-300 ease-in-out"
+            className="bg-white shadow-lg rounded-lg p-6 border border-[#A22823] transition-all duration-300 ease-in-out"
           >
             <div className="flex items-center mb-4">
-              <div className="w-12 h-12 bg-gray-300 dark:bg-gray-600 rounded-full mr-4">
-                {/* here */}
+              <div className="w-12 h-12 bg-gray-300 rounded-full mr-4">
+                {/* Optional: Add an icon or image */}
               </div>
               <div>
-                <h4 className="font-bold text-lg text-gray-900 dark:text-gray-100">
+                <h4 className="font-bold text-lg text-gray-900">
                   {review.name}
                 </h4>
                 <p className="text-gray-500 text-sm">{review.date}</p>
@@ -67,7 +67,7 @@ const Reviews = () => {
             </p>
             <button
               onClick={() => toggleExpand(index)}
-              className="text-blue-600 dark:text-blue-400 hover:underline focus:outline-none"
+              className="text-[#A22823] hover:underline focus:outline-none"
             >
               {expanded === index ? "Свернуть" : "Развернуть"}
             </button>

@@ -16,7 +16,7 @@ export default function BasicInfo() {
             />
           </div>
           <div className="w-full md:w-1/2 flex flex-col justify-center">
-            <div className="bg-white p-6 md:p-8 rounded-lg shadow-lg border border-gray-200">
+            <div className="bg-white p-6 md:p-8 rounded-lg shadow-lg border border-[#A22823]">
               <p className="mb-4 text-base md:text-lg leading-relaxed text-gray-700">
                 Компания «Softway» работает на рынке биржевого консалтинга и
                 информационных технологий в Казахстане.

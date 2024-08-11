@@ -6,3 +6,8 @@ body {
   margin: 0;
   padding: 0;
 }
+
+.glowing-text {
+  color: #A22823; /* The color from the image */
+  text-shadow: 0 0 5px #A22823, 0 0 10px #A22823, 0 0 20px #A22823, 0 0 30px #A22823;
+}

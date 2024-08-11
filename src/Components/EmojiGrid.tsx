@@ -16,7 +16,7 @@ const EmojiGrid = () => {
   return (
     <>
       <h2 className="text-center text-3xl font-extrabold text-[#A22823] mt-12 mb-12 sm:text-4xl md:text-5xl">
-        ПОЧЕМУ ВЫБИРАЮТ НАС
+        Почему выбирают нас?
       </h2>
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8 p-6 mx-auto max-w-screen-xl mt-12 mb-24">
         {departments.map((dept, index) => (

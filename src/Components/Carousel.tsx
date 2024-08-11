@@ -43,13 +43,13 @@ const Carousel = () => {
           <div className="absolute inset-x-0 top-1/2 transform -translate-y-1/2 text-center text-white">
             <h2
               data-aos="fade-up"
-              className="text-xl mt-10 sm:text-3xl sm:mt-1  md:text-4xl lg:text-5xl xl:text-6xl"
+              className="text-xl mt-10 sm:text-3xl sm:mt-1  md:text-4xl lg:text-5xl xl:text-6xl drop-shadow-lg"
             >
               Управление кредитованием
             </h2>
             <p
               data-aos="fade-down"
-              className="text-xs mt-6 mb-5 px-10 sm:text-lg sm:mt-10 sm:px-20 md:text-xl lg:text-2xl xl:text-3xl lg:px-28  leading-5 xl:leading-relaxed xl:px-40"
+              className="text-xs mt-6 mb-5 px-10 sm:text-lg sm:mt-10 sm:px-20 md:text-xl lg:text-2xl xl:text-3xl lg:px-28  leading-5 xl:leading-relaxed xl:px-40 drop-shadow-lg"
             >
               Решение позволяет автоматизировать все бизнес-процессы выдачи,
               учета и мониторинга кредитных/лизинговых сделок, обладая при этом
@@ -59,7 +59,7 @@ const Carousel = () => {
             <div className="relative flex items-center justify-center w-full h-full">
               <button
                 onClick={toggleModal}
-                className="text-gray-800 bg-gray-300 hover:bg-gray-400 focus:ring-4 focus:outline-none focus:ring-gray-200 font-medium rounded-lg text-xs px-1 py-1 text-center transition-all duration-300 ease-in-out sm:px-3 sm:py-3 md:px-3 md:py-3 lg:px-5 lg:py-5 xl:mt-10 xl:px-14 xl:text-2xl xl:py-5"
+                className="text-white bg-red-700 hover:bg-red-800 focus:ring-4 focus:outline-none focus:ring-red-500 font-bold rounded-lg text-xs px-1 py-1 text-center transition-all duration-300 ease-in-out sm:px-3 sm:py-3 md:px-3 md:py-3 lg:px-5 lg:py-5 xl:mt-10 xl:px-14 xl:text-2xl xl:py-5"
               >
                 Свяжитесь с нами
               </button>
@@ -80,13 +80,13 @@ const Carousel = () => {
           <div className="absolute inset-x-0 top-1/2 transform -translate-y-1/2 text-center text-white">
             <h2
               data-aos="fade-up"
-              className="text-xl mt-10 sm:text-3xl sm:mt-1 md:text-4xl lg:text-5xl xl:text-6xl"
+              className="text-xl mt-10 sm:text-3xl sm:mt-1 md:text-4xl lg:text-5xl xl:text-6xl drop-shadow-lg"
             >
               1C:ERP
             </h2>
             <p
               data-aos="fade-down"
-              className="text-xs mt-6 mb-5 px-10 sm:text-lg sm:mt-10 sm:px-20 md:text-xl lg:text-2xl xl:text-3xl lg:px-28 leading-5 xl:leading-relaxed xl:px-40"
+              className="text-xs mt-6 mb-5 px-10 sm:text-lg sm:mt-10 sm:px-20 md:text-xl lg:text-2xl xl:text-3xl lg:px-28 leading-5 xl:leading-relaxed xl:px-40 drop-shadow-lg"
             >
               Решение для построения комплексных информационных систем управления
               деятельностью многопрофильных предприятий, в том числе с технически
@@ -95,7 +95,7 @@ const Carousel = () => {
             <div className="relative flex items-center justify-center w-full h-full">
               <button
                 onClick={toggleModal}
-                className="text-gray-800 bg-gray-300 hover:bg-gray-400 focus:ring-4 focus:outline-none focus:ring-gray-200 font-medium rounded-lg text-xs px-1 py-1 text-center transition-all duration-300 ease-in-out sm:px-3 sm:py-3 md:px-3 md:py-3 lg:px-5 lg:py-5 xl:mt-10 xl:px-14 xl:text-2xl xl:py-5"
+                className="text-white bg-red-700 hover:bg-red-800 focus:ring-4 focus:outline-none focus:ring-red-500 font-bold rounded-lg text-xs px-1 py-1 text-center transition-all duration-300 ease-in-out sm:px-3 sm:py-3 md:px-3 md:py-3 lg:px-5 lg:py-5 xl:mt-10 xl:px-14 xl:text-2xl xl:py-5"
               >
                 Свяжитесь с нами
               </button>
@@ -116,13 +116,13 @@ const Carousel = () => {
           <div className="absolute inset-x-0 top-1/2 transform -translate-y-1/2 text-center text-white">
             <h2
               data-aos="fade-up"
-              className="text-xl mt-10 sm:text-3xl sm:mt-1 md:text-4xl lg:text-5xl xl:text-6xl"
+              className="text-xl mt-10 sm:text-3xl sm:mt-1 md:text-4xl lg:text-5xl xl:text-6xl drop-shadow-lg"
             >
               Управление кредитованием
             </h2>
             <p
               data-aos="fade-down"
-              className="text-xs mt-6 mb-5 px-10 sm:text-lg sm:mt-10 sm:px-20 md:text-xl lg:text-2xl xl:text-3xl lg:px-28 leading-5 xl:leading-relaxed xl:px-40"
+              className="text-xs mt-6 mb-5 px-10 sm:text-lg sm:mt-10 sm:px-20 md:text-xl lg:text-2xl xl:text-3xl lg:px-28 leading-5 xl:leading-relaxed xl:px-40 drop-shadow-lg"
             >
               Решение позволяет автоматизировать все бизнес-процессы выдачи, учета и
               мониторинга кредитных/лизинговых сделок, обладая при этом возможностью
@@ -131,7 +131,7 @@ const Carousel = () => {
             <div className="relative flex items-center justify-center w-full h-full">
               <button
                 onClick={toggleModal}
-                className="text-gray-800 bg-gray-300 hover:bg-gray-400 focus:ring-4 focus:outline-none focus:ring-gray-200 font-medium rounded-lg text-xs px-1 py-1 text-center transition-all duration-300 ease-in-out sm:px-3 sm:py-3 md:px-3 md:py-3 lg:px-5 lg:py-5 xl:mt-10 xl:px-14 xl:text-2xl xl:py-5"
+                className="text-white bg-red-700 hover:bg-red-800 focus:ring-4 focus:outline-none focus:ring-red-500 font-bold rounded-lg text-xs px-1 py-1 text-center transition-all duration-300 ease-in-out sm:px-3 sm:py-3 md:px-3 md:py-3 lg:px-5 lg:py-5 xl:mt-10 xl:px-14 xl:text-2xl xl:py-5"
               >
                 Свяжитесь с нами
               </button>

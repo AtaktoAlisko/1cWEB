@@ -1,7 +1,7 @@
 import Image from "next/image";
-import img1 from "../../public/image-1.jpeg";
-import img2 from "../../public/image-2.jpeg";
-import img3 from "../../public/image-3.jpeg";
+import img1 from "../../public/card1.png";
+import img2 from "../../public/card2.png";
+import img3 from "../../public/card3.png";
 
 export default function ServicesCards() {
   return (
@@ -13,13 +13,14 @@ export default function ServicesCards() {
             className="group block rounded-lg bg-white border border-[#A22823] shadow-lg transition-transform transform hover:scale-105 hover:shadow-2xl"
           >
             <a href={service.link}>
-              <div className="overflow-hidden rounded-t-lg">
+              <div className="overflow-hidden rounded-lg p-4">
                 <Image
-                  className="rounded-t-lg mx-auto transition-transform transform group-hover:scale-110 p-4"
+                  className="rounded-lg mx-auto transition-transform transform group-hover:scale-110"
                   src={service.image}
                   alt={service.alt}
+                  layout="responsive"
                   width={300}
-                  height={300}
+                  height={200}
                 />
               </div>
             </a>

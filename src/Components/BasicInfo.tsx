@@ -1,5 +1,18 @@
 import Image from "next/image";
 import astana from "../../public/astana.jpg";
+import { motion } from "framer-motion";
+
+const textAnimation = {
+  hidden: {
+    y: -100,
+    opacity: 0,
+  },
+  visible: (custom: number) => ({
+    x: 0,
+    opacity: 1,
+    transition: { delay: custom * 0.3 },
+  }),
+};
 
 export default function BasicInfo() {
   return (

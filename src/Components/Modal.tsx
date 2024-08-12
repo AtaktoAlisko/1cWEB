@@ -47,7 +47,7 @@ const Modal: React.FC<ModalProps> = ({ isOpen, toggleModal }) => {
           aria-hidden={!isOpen}
           className="fixed inset-0 z-50 flex items-center justify-center w-full h-full bg-black bg-opacity-60 backdrop-blur-sm"
         >
-          <div className="relative p-6 w-full max-w-lg">
+          <div className="relative p-5 w-full max-w-md border-sm-[#A22823]">
             <div className="relative bg-white dark:bg-gray-800 rounded-lg shadow-lg">
               <div className="flex items-center justify-between p-4 md:p-6 border-b border-gray-200 dark:border-gray-600">
                 <h3 className="text-2xl font-semibold text-gray-900 dark:text-white">
@@ -138,7 +138,7 @@ const Modal: React.FC<ModalProps> = ({ isOpen, toggleModal }) => {
                   </div>
                   <div className="flex items-center justify-center">
                     <button
-                      className="bg-gradient-to-r from-blue-500 to-blue-600 hover:from-blue-600 hover:to-blue-700 text-white font-bold py-2 px-6 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 dark:focus:ring-blue-400 transition-colors"
+                      className="bg-gradient-to-r from-red-500 to-red-600 hover:from-red-600 hover:to-red-700 text-white font-bold py-2 px-6 rounded-lg focus:outline-none focus:ring-2 focus:ring-red-500 dark:focus:ring-red-400 transition-colors"
                       type="submit"
                     >
                       Отправить

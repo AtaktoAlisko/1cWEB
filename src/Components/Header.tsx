@@ -132,6 +132,13 @@ export default function Header() {
           </div>
         </div>
       </header>
+
+      {isMenuOpen && (
+        <div
+          className="fixed top-0 left-0 w-full h-full bg-black bg-opacity-50 backdrop-blur-sm z-40"
+          onClick={() => setIsMenuOpen(false)}
+        ></div>
+      )}
     </>
   );
 }

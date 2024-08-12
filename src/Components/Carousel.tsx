@@ -5,7 +5,19 @@ import firstImg from "../../public/img-1.jpg";
 import secondImg from "../../public/img-2.jpg";
 import thirdImg from "../../public/img-3.jpg";
 import Modal from "../Components/Modal";
-import AOS from "aos";
+import { motion } from "framer-motion";
+
+const textAnimation = {
+  hidden: {
+    x: -100,
+    opacity: 0,
+  },
+  visible: (custom: number) => ({
+    x: 0,
+    opacity: 1,
+    transition: { delay: custom * 0.2 },
+  }),
+};
 
 const Carousel = () => {
   const [modalIsOpen, setModalIsOpen] = useState(false);
@@ -21,7 +33,9 @@ const Carousel = () => {
   const toggleModal = () => setModalIsOpen(!modalIsOpen);
 
   return (
-    <div
+    <motion.div
+      initial="hidden"
+      whileInView="visible"
       id="carouselExampleCaptions"
       className="relative"
       data-twe-carousel-init
@@ -41,28 +55,33 @@ const Carousel = () => {
             alt="Slide 1"
           />
           <div className="absolute inset-x-0 top-1/2 transform -translate-y-1/2 text-center text-white">
-            <h2
-              data-aos="fade-up"
+            <motion.h2
+              custom={1}
+              variants={textAnimation}
               className="text-xl mt-10 sm:text-3xl sm:mt-1  md:text-4xl lg:text-5xl xl:text-6xl drop-shadow-lg"
             >
               Управление кредитованием
-            </h2>
-            <p
-              data-aos="fade-down"
+            </motion.h2>
+
+            <motion.p
+              custom={2}
+              variants={textAnimation}
               className="text-xs mt-6 mb-5 px-10 sm:text-lg sm:mt-10 sm:px-20 md:text-xl lg:text-2xl xl:text-3xl lg:px-28  leading-5 xl:leading-relaxed xl:px-40 drop-shadow-lg"
             >
               Решение позволяет автоматизировать все бизнес-процессы выдачи,
               учета и мониторинга кредитных/лизинговых сделок, обладая при этом
               возможностью гибкой настройки и адаптации под специфику конкретной
               организации.
-            </p>
+            </motion.p>
             <div className="relative flex items-center justify-center w-full h-full">
-              <button
+              <motion.button
+                custom={3}
+                variants={textAnimation}
                 onClick={toggleModal}
                 className="text-white bg-red-700 hover:bg-red-800 focus:ring-4 focus:outline-none focus:ring-red-500 font-bold rounded-lg text-xs px-1 py-1 text-center transition-all duration-300 ease-in-out sm:px-3 sm:py-3 md:px-3 md:py-3 lg:px-5 lg:py-5 xl:mt-10 xl:px-14 xl:text-2xl xl:py-5"
               >
                 Свяжитесь с нами
-              </button>
+              </motion.button>
             </div>
           </div>
         </div>
@@ -78,19 +97,19 @@ const Carousel = () => {
             alt="Slide 2"
           />
           <div className="absolute inset-x-0 top-1/2 transform -translate-y-1/2 text-center text-white">
-            <h2
-              data-aos="fade-up"
+            <motion.h2
+              variants={textAnimation}
               className="text-xl mt-10 sm:text-3xl sm:mt-1 md:text-4xl lg:text-5xl xl:text-6xl drop-shadow-lg"
             >
               1C:ERP
-            </h2>
+            </motion.h2>
             <p
               data-aos="fade-down"
               className="text-xs mt-6 mb-5 px-10 sm:text-lg sm:mt-10 sm:px-20 md:text-xl lg:text-2xl xl:text-3xl lg:px-28 leading-5 xl:leading-relaxed xl:px-40 drop-shadow-lg"
             >
-              Решение для построения комплексных информационных систем управления
-              деятельностью многопрофильных предприятий, в том числе с технически
-              сложным производством.
+              Решение для построения комплексных информационных систем
+              управления деятельностью многопрофильных предприятий, в том числе
+              с технически сложным производством.
             </p>
             <div className="relative flex items-center justify-center w-full h-full">
               <button
@@ -114,19 +133,21 @@ const Carousel = () => {
             alt="Slide 3"
           />
           <div className="absolute inset-x-0 top-1/2 transform -translate-y-1/2 text-center text-white">
-            <h2
+            <motion.h2
+              variants={textAnimation}
               data-aos="fade-up"
               className="text-xl mt-10 sm:text-3xl sm:mt-1 md:text-4xl lg:text-5xl xl:text-6xl drop-shadow-lg"
             >
               Управление кредитованием
-            </h2>
+            </motion.h2>
             <p
               data-aos="fade-down"
               className="text-xs mt-6 mb-5 px-10 sm:text-lg sm:mt-10 sm:px-20 md:text-xl lg:text-2xl xl:text-3xl lg:px-28 leading-5 xl:leading-relaxed xl:px-40 drop-shadow-lg"
             >
-              Решение позволяет автоматизировать все бизнес-процессы выдачи, учета и
-              мониторинга кредитных/лизинговых сделок, обладая при этом возможностью
-              гибкой настройки и адаптации под специфику конкретной организации.
+              Решение позволяет автоматизировать все бизнес-процессы выдачи,
+              учета и мониторинга кредитных/лизинговых сделок, обладая при этом
+              возможностью гибкой настройки и адаптации под специфику конкретной
+              организации.
             </p>
             <div className="relative flex items-center justify-center w-full h-full">
               <button
@@ -197,7 +218,7 @@ const Carousel = () => {
 
       {/* Modal */}
       <Modal isOpen={modalIsOpen} toggleModal={toggleModal} />
-    </div>
+    </motion.div>
   );
 };
 

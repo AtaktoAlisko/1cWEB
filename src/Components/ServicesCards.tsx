@@ -32,14 +32,14 @@ export default function ServicesCards() {
                 {service.description}
               </p>
               <div className="flex justify-center">
-                <button
-                  type="button"
-                  className="inline-block rounded bg-[#A22823] px-6 py-2 text-xs font-medium uppercase leading-normal text-white shadow-md transition duration-150 ease-in-out hover:bg-[#D13430] focus:bg-[#D13430] focus:outline-none active:bg-[#801614]"
+                <a
+                  href="/details"
+                  className="inline-block rounded bg-[#A22823] px-6 py-2 text-xs font-medium uppercase leading-normal text-white shadow-md transition duration-150 ease-in-out hover:bg-primary-accent-light focus:bg-primary-accent-light focus:outline-none active:bg-red-600 dark:shadow-black/30 dark:hover:shadow-dark-strong dark:focus:shadow-dark-strong dark:active:shadow-dark-strong"
                   data-twe-ripple-init
                   data-twe-ripple-color="light"
                 >
                   Подробнее
-                </button>
+                </a>
               </div>
             </div>
           </div>

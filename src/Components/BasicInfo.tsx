@@ -25,6 +25,7 @@ export default function BasicInfo() {
               alt="Astana"
               layout="fill"
               objectFit="cover"
+              objectPosition="center top"
               className="rounded-lg shadow-lg"
             />
           </div>

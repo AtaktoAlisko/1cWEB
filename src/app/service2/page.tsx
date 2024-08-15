@@ -1,6 +1,6 @@
 import Image from "next/image";
 
-export default async function Service1() {
+export default async function Service2() {
   return (
     <>
       <div className="mt-32 mb-32">

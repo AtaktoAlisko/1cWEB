@@ -18,9 +18,12 @@ export default function ServicesCards() {
                 className="rounded-lg mx-auto transition-transform transform group-hover:scale-110"
                 src={service.image}
                 alt={service.alt}
-                layout="responsive"
                 width={300}
                 height={200}
+                style={{
+                  width: '100%',
+                  height: 'auto',
+                }}
               />
             </div>
             <div className="p-6 text-gray-800">

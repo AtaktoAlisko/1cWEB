@@ -23,9 +23,11 @@ export default function BasicInfo() {
             <Image
               src={astana}
               alt="Astana"
-              layout="fill"
-              objectFit="cover"
-              objectPosition="center top"
+              fill
+              style={{
+                objectFit: 'cover',
+                objectPosition: 'center top',
+              }}
               className="rounded-lg shadow-lg"
             />
           </div>

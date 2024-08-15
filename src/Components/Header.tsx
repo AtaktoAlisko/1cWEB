@@ -78,7 +78,7 @@ export default function Header() {
               </li>
               <li className="max-lg:border-b max-lg:py-3 px-3">
                 <a
-                  href="javascript:void(0)"
+                  // href="javascript:void(0)"
                   className="hover:text-[#a2382b] text-[#333] block font-bold text-[15px]"
                 >
                   Продукты
@@ -86,7 +86,7 @@ export default function Header() {
               </li>
               <li className="max-lg:border-b max-lg:py-3 px-3">
                 <a
-                  href="javascript:void(0)"
+                  // href="javascript:void(0)"
                   className="hover:text-[#a2382b] text-[#333] block font-bold text-[15px]"
                 >
                   Услуги
@@ -94,7 +94,7 @@ export default function Header() {
               </li>
               <li className="max-lg:border-b max-lg:py-3 px-3">
                 <a
-                  href="javascript:void(0)"
+                  // href="javascript:void(0)"
                   className="hover:text-[#a2382b] text-[#333] block font-bold text-[15px]"
                 >
                   Выполненные проекты

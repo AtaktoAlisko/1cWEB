@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import img1 from "../../public/card1.png";
 import img2 from "../../public/card2.png";
 import img3 from "../../public/card3.png";
@@ -12,18 +13,19 @@ export default function ServicesCards() {
             key={index}
             className="group block rounded-lg bg-white border border-[#A22823] shadow-lg transition-transform transform hover:scale-105 hover:shadow-2xl"
           >
-            <a href={service.link}>
-              <div className="overflow-hidden rounded-lg p-4">
-                <Image
-                  className="rounded-lg mx-auto transition-transform transform group-hover:scale-110"
-                  src={service.image}
-                  alt={service.alt}
-                  layout="responsive"
-                  width={300}
-                  height={200}
-                />
-              </div>
-            </a>
+            <div className="overflow-hidden rounded-lg p-4">
+              <Image
+                className="rounded-lg mx-auto transition-transform transform group-hover:scale-110"
+                src={service.image}
+                alt={service.alt}
+                width={300}
+                height={200}
+                style={{
+                  width: '100%',
+                  height: 'auto',
+                }}
+              />
+            </div>
             <div className="p-6 text-gray-800">
               <h5 className="mb-2 text-xl font-semibold text-center">
                 {service.title}
@@ -32,14 +34,14 @@ export default function ServicesCards() {
                 {service.description}
               </p>
               <div className="flex justify-center">
-                <a
-                  href="/details"
+                <Link
+                  href={service.link}
                   className="inline-block rounded bg-[#A22823] px-6 py-2 text-xs font-medium uppercase leading-normal text-white shadow-md transition duration-150 ease-in-out hover:bg-primary-accent-light focus:bg-primary-accent-light focus:outline-none active:bg-red-600 dark:shadow-black/30 dark:hover:shadow-dark-strong dark:focus:shadow-dark-strong dark:active:shadow-dark-strong"
                   data-twe-ripple-init
                   data-twe-ripple-color="light"
                 >
                   Подробнее
-                </a>
+                </Link>
               </div>
             </div>
           </div>
@@ -56,7 +58,7 @@ const services = [
       "Мы предоставляем полный комплекс услуг по внедрению решений и обеспечиваем самый высокий уровень обслуживания.",
     image: img1,
     alt: "ERP Управление предприятием",
-    link: "#!",
+    link: "/service1",
   },
   {
     title: "1С:Управление холдингом",
@@ -64,14 +66,14 @@ const services = [
       "Мы ответственно подходим к своему делу. Всегда следим за соблюдением сроков и качества выполнения работ.",
     image: img2,
     alt: "Управление холдингом",
-    link: "#!",
+    link: "/service2",
   },
   {
     title: "ВСЕ УСЛУГИ",
     description:
-      "В нашей компетенции внедрять решения в крупных проектах и ​​доводить их до победы.",
+      "В нашей компетенции внедрять решения в крупных проектах и ​доводить их до победы.",
     image: img3,
     alt: "Все услуги",
-    link: "#!",
+    link: "/services",
   },
 ];

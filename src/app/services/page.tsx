@@ -1,6 +1,6 @@
 import Image from "next/image";
 
-export default async function Details() {
+export default async function Services() {
   return (
     <>
       <div className="mt-32 mb-32">

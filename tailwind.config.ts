@@ -17,7 +17,7 @@ const config: Config = {
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
       },
     },
-    // Uncomment the following if you need the 'smm' breakpoint
+    // Uncomment the following if you need the 'smm' breakpoint huh
     // screens: {
     //   smm: "360px",
     // },

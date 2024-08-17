@@ -2,7 +2,15 @@
 
 import React, { useState } from "react";
 
-const reviews = [
+interface Review {
+  name: string;
+  date: string;
+  text: string;
+  link: string;
+  image: string;
+}
+
+const reviews: Review[] = [
   {
     name: "Когай Д.",
     date: "10 декабря 2022",
@@ -33,10 +41,10 @@ const reviews = [
   },
 ];
 
-const Reviews = () => {
-  const [expanded, setExpanded] = useState(null);
+const Reviews: React.FC = () => {
+  const [expanded, setExpanded] = useState<number | null>(null);
 
-  const toggleExpand = (index) => {
+  const toggleExpand = (index: number) => {
     setExpanded(expanded === index ? null : index);
   };
 

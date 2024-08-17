@@ -29,7 +29,9 @@ export default function Header() {
     <>
       <header className="fixed top-0 left-0 w-full text-white shadow-md font-sans tracking-wide z-50">
         <div className="flex flex-wrap items-center justify-between gap-4 px-10 py-4 bg-white min-h-[70px]">
-          <a href="javascript:void(0)">
+          <a 
+          // href="javascript:void(0)"
+          >
             <Image src="/logo.png" alt="logo" width={144} height={36} />
           </a>
           <div
@@ -56,7 +58,9 @@ export default function Header() {
 
             <ul className="lg:flex lg:gap-x-5 max-lg:space-y-3 max-lg:fixed max-lg:bg-white max-lg:w-1/2 max-lg:min-w-[300px] max-lg:top-0 max-lg:left-0 max-lg:p-6 max-lg:h-full max-lg:shadow-md max-lg:overflow-auto z-50">
               <li className="mb-6 hidden max-lg:block">
-                <a href="javascript:void(0)">
+                <a 
+                // href="javascript:void(0)"
+                >
                   <Image src="/logo.png" alt="logo" width={144} height={36} />
                 </a>
               </li>

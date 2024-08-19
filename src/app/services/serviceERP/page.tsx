@@ -37,27 +37,14 @@ const ERPManagementPage: React.FC = () => {
               </h2>
               <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
                 {[
-                  "Строительство",
-                  "Финансовый сектор",
-                  "Сельское хозяйство",
-                  "Торговля",
-                ].map((sector, index) => (
+                  { icon: "🏗️", name: "Строительство" },
+                  { icon: "🏦", name: "Финансовый сектор" },
+                  { icon: "🚜", name: "Сельское хозяйство" },
+                  { icon: "🛒", name: "Торговля" },
+                ].map((item, index) => (
                   <div key={index} className="flex flex-col items-center">
-                    <div className="bg-red-600 text-white p-4 rounded-full mb-4">
-                      <svg
-                        className="w-6 h-6"
-                        fill="currentColor"
-                        viewBox="0 0 20 20"
-                        xmlns="http://www.w3.org/2000/svg"
-                      >
-                        <path
-                          fillRule="evenodd"
-                          d="M4 4a2 2 0 012-2h8a2 2 0 012 2v12a2 2 0 01-2 2H6a2 2 0 01-2-2V4zm2 0v12h8V4H6z"
-                          clipRule="evenodd"
-                        />
-                      </svg>
-                    </div>
-                    <p className="text-center font-medium">{sector}</p>
+                    <div className="text-4xl mb-2">{item.icon}</div>
+                    <p className="text-center">{item.name}</p>
                   </div>
                 ))}
               </div>

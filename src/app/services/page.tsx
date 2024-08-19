@@ -1,177 +1,148 @@
+"use client"
+
+import { useRef } from 'react';
 import Image from "next/image";
+import Link from "next/link";
+import { motion } from "framer-motion";
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css"; 
+import "slick-carousel/slick/slick-theme.css";
 
-export default async function Services() {
+import img1 from "/public/card1.png";
+import img2 from "/public/card2.png";
+import img3 from "/public/card3.png";
+import heroImage from "/public/img-1.jpg";
+
+const services = [
+  {
+    title: "1С:ERP Управление предприятием",
+    description: "Мы предоставляем полный комплекс услуг по внедрению решений и обеспечиваем самый высокий уровень обслуживания.",
+    image: img1,
+    alt: "ERP Управление предприятием",
+    link: "/services/serviceERP",
+  },
+  {
+    title: "IT-аудит и оптимизация 1С",
+    description: "Проводим комплексный анализ и оптимизацию систем 1С для повышения эффективности вашего бизнеса.",
+    image: img2,
+    alt: "IT-аудит и оптимизация 1С",
+    link: "/services/serviceITAudit",
+  },
+  {
+    title: "Автоматизация бизнес-процессов",
+    description: "Разрабатываем и внедряем решения для автоматизации ключевых бизнес-процессов вашей компании.",
+    image: img3,
+    alt: "Автоматизация бизнес-процессов",
+    link: "/services/serviceAutomation",
+  },
+  {
+    title: "Техническое сопровождение информационных систем",
+    description: "Обеспечиваем бесперебойную работу ваших информационных систем с помощью профессиональной технической поддержки.",
+    image: img1,
+    alt: "Техническое сопровождение",
+    link: "/services/serviceTechnicalSupport",
+  },
+  {
+    title: "1С:Управление холдингом",
+    description: "Мы ответственно подходим к своему делу. Всегда следим за соблюдением сроков и качества выполнения работ.",
+    image: img2,
+    alt: "Управление холдингом",
+    link: "/services/serviceHolding",
+  },
+  {
+    title: "Управление микрофинансовой организацией (МФО)",
+    description: "Предлагаем специализированные решения для эффективного управления микрофинансовыми организациями.",
+    image: img3,
+    alt: "Управление МФО",
+    link: "/services/serviceMFO",
+  },
+];
+
+export default function ServicesCarousel() {
+  const sliderRef = useRef(null);
+
+  const settings = {
+    dots: true,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 1,
+        }
+      },
+      {
+        breakpoint: 640,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1
+        }
+      }
+    ]
+  };
+
   return (
-    <>
-      <div className="mt-32 mb-32">
-        <div>
-          <h1 className="text-4xl ml-[540px] font-bold">
-            Управление микрофинансовой организацией (МФО)
-          </h1>
-          <hr className="mt-2 w-20 border-t-[4px] ml-[540px] border-[#A22823]" />
-        </div>
-
-        <div className="mx-10 mt-14 flex flex-col lg:flex-row">
-          <div className="lg:w-1/4 mb-8 lg:mb-0">
-            <ul className="bg-gray-50 dark:bg-gray-800 space-y-2 p-4 rounded-lg">
-              <li className="py-2">1C:ERP Управление предприятием</li>
-              <li className="py-2">IT-аудит и оптимизация 1С</li>
-              <li className="py-2">Автоматизация бизнес-процессов</li>
-              <li className="py-2">
-                Техническое сопровождение информационных систем
-              </li>
-              <li className="py-2">1C:Управление холдингом</li>
-              <li className="py-2 border-l-4 border-[#A22823] pl-2">
-                Управление микрофинансовой организацией (МФО)
-              </li>
-            </ul>
-            <div className="mt-10 px-3 py-3 bg-gray-500 rounded-md ">
-              <p>Презентация компаний</p>
-            </div>
-
-            <div className="mt-10 px-12 py-12 bg-red-500 rounded-sm text-white ">
-              <p>Мы можем помочь Вам?</p>
-              <p>Свяжитесь с нами и наши менеджеры дадут</p>
-              <p>Вам полную и бесплатную консультацию.</p>
-              <p className="px-3 py-3 w-1/2 bg-white text-black">Контакты</p>
-            </div>
-          </div>
-
-          {/* Правая часть с текстом */}
-          <div className="lg:w-3/4 px-4 lg:px-8 ml-24">
-            <h2 className="text-3xl font-bold">
-              Разработка и внедрение комплексной информационной системы
-              управления кредитованием.
-            </h2>
-            <hr className="mt-2 w-20 border-t-[4px] border-[#A22823]" />
-            <p className="mt-4 text-gray-700">
-              Данное комплексное решение на базе системы 1C:Предприятие 8
-              предназначено для банков и компаний, специализирующихся на
-              предоставлении услуг в области кредитования и финансового
-              лизинга...
-            </p>
-            <p className="mt-4 text-gray-700">
-              Разработка данного решения базируется на основе многолетнего опыта
-              разработки и внедрения систему правления лизингом и кредитованием
-              в ряде компаний Казахстана.
-            </p>
-            <p className="mt-4 text-gray-700">
-              Предлагаемое решение полностью построено на базе системы
-              1С:Предприятие8, поэтому вся управленческая, финансовая и прочая
-              информация, а также весь документооборот сведены в системе
-              воедино.
-            </p>
-            <p className="mt-4 text-gray-700">
-              Так как система реализована по модульному принципу, имеется
-              возможность запуска отдельных модулей в зависимости от
-              потребностей заказчика.
-            </p>
-
-            <div className="mt-14">
-              <h3 className="text-2xl font-bold">Кому подойдет решение</h3>
-              <hr className="mt-2 w-20 border-t-[4px] border-[#A22823]" />
-              <div className="flex gap-20 mt-12">
-                <div className="text-center">
-                  <div className="text-4xl">🏗️</div>
-                  <p>Строительство</p>
-                </div>
-                <div className="text-center">
-                  <div className="text-4xl">💼</div>
-                  <p>Финансовый сектор</p>
-                </div>
-                <div className="text-center">
-                  <div className="text-4xl">🚜</div>
-                  <p>Сельское хозяйство</p>
-                </div>
-                <div className="text-center">
-                  <div className="text-4xl">🛒</div>
-                  <p>Торговля</p>
-                </div>
-              </div>
-            </div>
-
-            <h2 className="text-3xl font-bold mt-40">
-              Состав модулей системы:
-            </h2>
-            <hr className="mt-2 w-20 border-t-[4px] border-[#A22823]" />
-
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-x-10 text-gray-700 mt-14">
-              <ul className="space-y-2">
-                <li className="flex items-center">
-                  <span className="text-red-500 mr-2">♦</span> Рассмотрение
-                  заявок
-                </li>
-                <li className="flex items-center">
-                  <span className="text-red-500 mr-2">♦</span> Заключение
-                  договоров
-                </li>
-                <li className="flex items-center">
-                  <span className="text-red-500 mr-2">♦</span> Учет залогового
-                  имущества
-                </li>
-                <li className="flex items-center">
-                  <span className="text-red-500 mr-2">♦</span> Учет
-                  взаиморасчетов по выданным займам
-                </li>
-                <li className="flex items-center">
-                  <span className="text-red-500 mr-2">♦</span> Регламентные
-                  операции
-                </li>
-                <li className="flex items-center">
-                  <span className="text-red-500 mr-2">♦</span> Посткредитное
-                  обслуживание
-                </li>
-                <li className="flex items-center">
-                  <span className="text-red-500 mr-2">♦</span> Работа с
-                  проблемными заемщиками
-                </li>
-                <li className="flex items-center">
-                  <span className="text-red-500 mr-2">♦</span> Управление
-                  рисками
-                </li>
-                <li className="flex items-center">
-                  <span className="text-red-500 mr-2">♦</span> Учет привлеченных
-                  займов и ценных бумаг
-                </li>
-              </ul>
-
-              <ul className="space-y-2">
-                <li className="flex items-center">
-                  <span className="text-red-500 mr-2">♦</span> Казначейство
-                </li>
-                <li className="flex items-center">
-                  <span className="text-red-500 mr-2">♦</span> Бюджетирование
-                </li>
-                <li className="flex items-center">
-                  <span className="text-red-500 mr-2">♦</span> Взаиморасчеты с
-                  поставщиками предметов лизинга
-                </li>
-                <li className="flex items-center">
-                  <span className="text-red-500 mr-2">♦</span> Отчетность
-                </li>
-                <li className="flex items-center">
-                  <span className="text-red-500 mr-2">♦</span> Интеграция
-                </li>
-                <li className="flex items-center">
-                  <span className="text-red-500 mr-2">♦</span> Кадровый учет и
-                  расчет заработной платы
-                </li>
-                <li className="flex items-center">
-                  <span className="text-red-500 mr-2">♦</span>{" "}
-                  Регламентированный учет
-                </li>
-                <li className="flex items-center">
-                  <span className="text-red-500 mr-2">♦</span> Управление
-                  закупками
-                </li>
-                <li className="flex items-center">
-                  <span className="text-red-500 mr-2">♦</span> Документооборот
-                </li>
-              </ul>
-            </div>
-          </div>
+    <div className="bg-gray-100">
+      <div className="relative h-[50vh] w-full">
+        <Image
+          src={heroImage}
+          alt="Services Hero Image"
+          layout="fill"
+          objectFit="cover"
+          quality={100}
+        />
+        <div className="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center">
+          <h1 className="text-4xl md:text-6xl text-white font-bold">Our Services</h1>
         </div>
       </div>
-    </>
+      <div className="container mx-auto px-4 py-16">
+        <h2 className="text-3xl font-bold text-center mb-12">Наши услуги</h2>
+        <Slider ref={sliderRef} {...settings}>
+          {services.map((service, index) => (
+            <motion.div
+              key={index}
+              initial={{ opacity: 0, y: 50 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: index * 0.1 }}
+              className="px-2"
+            >
+              <div className="group flex flex-col rounded-lg bg-white border border-[#A22823] shadow-lg transition-transform transform hover:scale-105 hover:shadow-2xl h-full">
+                <div className="overflow-hidden rounded-lg p-4">
+                  <Image
+                    className="rounded-lg mx-auto transition-transform transform group-hover:scale-110"
+                    src={service.image}
+                    alt={service.alt}
+                    width={300}
+                    height={300}
+                    style={{
+                      width: '100%',
+                      height: 'auto',
+                      aspectRatio: '1/1',
+                      objectFit: 'cover',
+                    }}
+                  />
+                </div>
+                <div className="p-6 text-gray-800 flex flex-col flex-grow">
+                  <h3 className="mb-2 text-xl font-semibold text-center">{service.title}</h3>
+                  <p className="mb-4 text-base text-center flex-grow">{service.description}</p>
+                  <div className="flex justify-center mt-auto">
+                    <Link
+                      href={service.link}
+                      className="inline-block rounded bg-[#A22823] px-6 py-2 text-xs font-medium uppercase leading-normal text-white shadow-md transition duration-150 ease-in-out hover:bg-red-700 focus:bg-red-800 focus:outline-none active:bg-red-900"
+                    >
+                      Подробнее
+                    </Link>
+                  </div>
+                </div>
+              </div>
+            </motion.div>
+          ))}
+        </Slider>
+      </div>
+    </div>
   );
 }

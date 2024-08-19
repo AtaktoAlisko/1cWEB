@@ -3,12 +3,12 @@ import Link from "next/link";
 
 const SidebarMenu: React.FC = () => {
   const menuItems = [
-    { title: "1С:ERP Управление предприятием", link: "#" },
+    { title: "1С:ERP Управление предприятием", link: "/serviceERP" },
     { title: "IT-аудит и оптимизация 1С", link: "#" },
     { title: "Автоматизация бизнес-процессов", link: "#" },
     { title: "Техническое сопровождение информационных систем", link: "#" },
-    { title: "1С:Управление холдингом", link: "#" },
-    { title: "Управление микрофинансовой организацией (МФО)", link: "#" },
+    { title: "1С:Управление холдингом", link: "/serviceHolding" },
+    { title: "Управление микрофинансовой организацией (МФО)", link: "/serviceMFO" },
   ];
 
   return (

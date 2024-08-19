@@ -1,11 +1,13 @@
-// tailwind.config.js
+// tailwind.config.ts
 import type { Config } from "tailwindcss";
 
 const config: Config = {
   content: [
-    "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
-    "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
-    "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
+    "./src/**/*.{js,ts,jsx,tsx,mdx}",
+    "./app/**/*.{js,ts,jsx,tsx}",
+    "./pages/**/*.{js,ts,jsx,tsx}",
+    "./components/**/*.{js,ts,jsx,tsx}",
+    "./node_modules/tw-elements/js/**/*.js",
   ],
   theme: {
     extend: {
@@ -14,10 +16,14 @@ const config: Config = {
         "gradient-conic":
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
       },
-     
     },
+    // Uncomment the following if you need the 'smm' breakpoint huh
+    // screens: {
+    //   smm: "360px",
+    // },
   },
-  plugins: [],
+  darkMode: "class",
+  plugins: [require("tw-elements/plugin.cjs")],
 };
 
 export default config;

@@ -11,7 +11,7 @@ export default function ServicesCards() {
         {services.map((service, index) => (
           <div
             key={index}
-            className="group block rounded-lg bg-white border border-[#A22823] shadow-lg transition-transform transform hover:scale-105 hover:shadow-2xl"
+            className="group flex flex-col rounded-lg bg-white border border-[#A22823] shadow-lg transition-transform transform hover:scale-105 hover:shadow-2xl h-full"
           >
             <div className="overflow-hidden rounded-lg p-4">
               <Image
@@ -26,14 +26,14 @@ export default function ServicesCards() {
                 }}
               />
             </div>
-            <div className="p-6 text-gray-800">
+            <div className="p-6 text-gray-800 flex flex-col flex-grow">
               <h5 className="mb-2 text-xl font-semibold text-center">
                 {service.title}
               </h5>
-              <p className="mb-4 text-base text-center">
+              <p className="mb-4 text-base text-center flex-grow">
                 {service.description}
               </p>
-              <div className="flex justify-center">
+              <div className="flex justify-center mt-auto">
                 <Link
                   href={service.link}
                   className="inline-block rounded bg-[#A22823] px-6 py-2 text-xs font-medium uppercase leading-normal text-white shadow-md transition duration-150 ease-in-out hover:bg-primary-accent-light focus:bg-primary-accent-light focus:outline-none active:bg-red-600 dark:shadow-black/30 dark:hover:shadow-dark-strong dark:focus:shadow-dark-strong dark:active:shadow-dark-strong"
@@ -71,7 +71,7 @@ const services = [
   {
     title: "ВСЕ УСЛУГИ",
     description:
-      "В нашей компетенции внедрять решения в крупных проектах и ​доводить их до победы.",
+      "В нашей компетенции внедрять решения в крупных проектах и доводить их до победы.",
     image: img3,
     alt: "Все услуги",
     link: "/services",

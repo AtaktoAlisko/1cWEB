@@ -29,8 +29,7 @@ export default function Header() {
     <>
       <header className="fixed top-0 left-0 w-full text-white shadow-md font-sans tracking-wide z-50">
         <div className="flex flex-wrap items-center justify-between gap-4 px-10 py-4 bg-white min-h-[70px]">
-          <a 
-          // href="javascript:void(0)"
+          <a href="/"
           >
             <Image src="/logo.png" alt="logo" width={144} height={36} />
           </a>

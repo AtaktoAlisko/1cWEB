@@ -1,8 +1,8 @@
 import Image from "next/image";
 import Link from "next/link";
-import img1 from "../../public/card1.png";
-import img2 from "../../public/card2.png";
-import img3 from "../../public/card3.png";
+import img1 from "/public/ServicesImages/erp.png";
+import img2 from "/public/ServicesImages/hold.png";
+import img3 from "/public/ServicesImages/all.png";
 
 export default function ServicesCards() {
   return (
@@ -58,7 +58,7 @@ const services = [
       "Мы предоставляем полный комплекс услуг по внедрению решений и обеспечиваем самый высокий уровень обслуживания.",
     image: img1,
     alt: "ERP Управление предприятием",
-    link: "/services/serviceERP",
+    link: "/services/ERP",
   },
   {
     title: "1С:Управление холдингом",
@@ -66,7 +66,7 @@ const services = [
       "Мы ответственно подходим к своему делу. Всегда следим за соблюдением сроков и качества выполнения работ.",
     image: img2,
     alt: "Управление холдингом",
-    link: "/services/serviceHolding",
+    link: "/services/Holding",
   },
   {
     title: "ВСЕ УСЛУГИ",

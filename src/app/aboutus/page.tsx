@@ -3,11 +3,11 @@ import Header from "@/Components/Header";
 // import Head from "@/Components/ContactBar";
 import Carousel from "@/Components/Carousel";
 import EmojiGrid from "@/Components/EmojiGrid";
-import ProudNumbersBar from "@/Components/ProudNumbersBar";
-import BasicInfo from "@/Components/BasicInfo";
-import Reviews from "@/Components/Reviews";
+import ProudNumbersBar from "@/Components/Homepage/ProudNumbersBar";
+import BasicInfo from "@/Components/Homepage/BasicInfo";
+import Reviews from "@/Components/Homepage/Reviews";
 import Footer from "@/Components/Footer";
-import ServicesCards from "@/Components/ServicesCards";
+import ServicesCards from "@/Components/Homepage/ServicesCards";
 
 
 export default async function Aboutus() {

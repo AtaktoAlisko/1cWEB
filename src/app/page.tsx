@@ -1,20 +1,20 @@
 import Image from "next/image";
 import Header from "../Components/Header";
 // import Head from "../Components/ContactBar";
-import Carousel from "../Components/Carousel";
-import Info from "../Components/ServicesCards";
-import DepartmentGrid from "../Components/EmojiGrid";
-import ProudNumbersBar from "@/Components/ProudNumbersBar";
-import About from "../Components/BasicInfo";
-import Reviews from "../Components/Reviews";
+import Carousel from "../Components/Homepage/Carousel";
+import Info from "../Components/Homepage/ServicesCards";
+import DepartmentGrid from "../Components/Homepage/EmojiGrid";
+import ProudNumbersBar from "@/Components/Homepage/ProudNumbersBar";
+import BasicInfo from "../Components/Homepage/BasicInfo";
+import Reviews from "../Components/Homepage/Reviews";
 import Footer from "../Components/Footer";
-import ServicesCards from "../Components/ServicesCards";
+import ServicesCards from "../Components/Homepage/ServicesCards";
 
 export default function Home() {
   return (
     <>
       <Carousel />
-      <About />
+      <BasicInfo />
 
       <DepartmentGrid />
       <ServicesCards />

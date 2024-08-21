@@ -1,10 +1,10 @@
 "use client";
 import { useEffect, useState } from "react";
 import Image from "next/image";
-import firstImg from "../../public/img-1.jpg";
-import secondImg from "../../public/img-2.jpg";
-import thirdImg from "../../public/img-3.jpg";
-import Modal from "../Components/Modal";
+import firstImg from "../../../public/Carousel/img-1.jpg";
+import secondImg from "../../../public/Carousel/img-2.jpg";
+import thirdImg from "../../../public/Carousel/img-3.jpg";
+import Modal from "../Modal";
 import { motion } from "framer-motion";
 
 const textAnimation = {

@@ -1,5 +1,5 @@
 import Image from "next/image";
-import astana from "../../public/astana.jpg";
+import astana from "../../../public/astana.jpg";
 import { motion } from "framer-motion";
 
 const textAnimation = {

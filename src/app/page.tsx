@@ -9,6 +9,7 @@ import BasicInfo from "../Components/Homepage/BasicInfo";
 import Reviews from "../Components/Homepage/Reviews";
 import Footer from "../Components/Footer";
 import ServicesCards from "../Components/Homepage/ServicesCards";
+import ServicesCarousel from "./services/page";
 
 export default function Home() {
   return (
@@ -17,8 +18,8 @@ export default function Home() {
       <BasicInfo />
 
       <DepartmentGrid />
-      <ServicesCards />
-
+      {/* <ServicesCards /> */}
+      <ServicesCarousel />
       <ProudNumbersBar />
       <Reviews />
     </>

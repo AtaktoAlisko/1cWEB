@@ -89,7 +89,7 @@ export default function Header() {
               </li>
               <li className="max-lg:border-b max-lg:py-3 px-3">
                 <a
-                  // href="javascript:void(0)"
+                  href="/services"
                   className="hover:text-[#a2382b] text-[#333] block font-bold text-[15px]"
                 >
                   Услуги

@@ -15,7 +15,7 @@ import img3 from "/public/ServicesImages/auto.png";
 import img4 from "/public/ServicesImages/follow.png";
 import img5 from "/public/ServicesImages/hold.png";
 import img6 from "/public/ServicesImages/micro.png";
-import heroImage from "/public/Carousel/img-1.jpg";
+import heroImage from "/public/bgRed.jpg";
 
 const services = [
   {
@@ -227,7 +227,7 @@ export default function ServicesCarousel() {
           quality={100}
         />
         <div className="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center">
-          <h1 className="text-4xl md:text-6xl text-white font-bold">Our Services</h1>
+          <h1 className="text-4xl md:text-6xl text-white font-bold">Наши услуги</h1>
         </div>
       </div>
       <div className="container mx-auto px-8 py-16 relative">

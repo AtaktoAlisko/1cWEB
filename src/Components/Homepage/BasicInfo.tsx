@@ -1,20 +1,12 @@
+"use client";
+
 import Image from "next/image";
 import astana from "../../../public/astana.jpg";
-import { motion } from "framer-motion";
-
-const textAnimation = {
-  hidden: {
-    y: -100,
-    opacity: 0,
-  },
-  visible: (custom: number) => ({
-    x: 0,
-    opacity: 1,
-    transition: { delay: custom * 0.3 },
-  }),
-};
+import { useState } from "react";
 
 export default function BasicInfo() {
+  const [isOpen, setIsOpen] = useState(false);
+
   return (
     <>
       <div className="my-20 mx-4 sm:mx-8 md:mx-16 lg:mx-24 xl:mx-32 2xl:mx-40">
@@ -25,8 +17,8 @@ export default function BasicInfo() {
               alt="Astana"
               fill
               style={{
-                objectFit: 'cover',
-                objectPosition: 'center top',
+                objectFit: "cover",
+                objectPosition: "center top",
               }}
               className="rounded-lg shadow-lg"
             />
@@ -42,18 +34,32 @@ export default function BasicInfo() {
                 эффективности деятельности, предусматриваем развитие передовых
                 управленческих и информационных технологий.
               </p>
-              <p className="mb-4 text-base md:text-lg leading-relaxed text-gray-700">
+              <p
+                className={`mb-4 text-base md:text-lg leading-relaxed text-gray-700 ${
+                  isOpen ? "block" : "hidden"
+                }`}
+              >
                 Компания «Softway» видит свою миссию в том, чтобы с помощью
                 современных информационных и управленческих технологий
                 обеспечить казахстанским, международным и государственным
                 организациям качественно новый уровень эффективности
                 (управления).
               </p>
-              <p className="text-base md:text-lg leading-relaxed text-gray-700">
+              <p
+                className={`text-base md:text-lg leading-relaxed text-gray-700 ${
+                  isOpen ? "block" : "hidden"
+                }`}
+              >
                 Как и любая другая казахстанская компания, мы являемся частью
                 нашей страны, пропитаны духом ее победы и устремлены только
                 вперед.
               </p>
+              <button
+                className="mt-4 text-[#A22823] font-semibold hover:underline md:hidden"
+                onClick={() => setIsOpen(!isOpen)}
+              >
+                {isOpen ? "Скрыть" : "Показать больше"}
+              </button>
             </div>
           </div>
         </div>

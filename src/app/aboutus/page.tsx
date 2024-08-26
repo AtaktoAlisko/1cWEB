@@ -1,4 +1,5 @@
 import Reviews from "@/Components/Homepage/Reviews";
+import EmployeeSlider from "@/Components/EmployeeSlider";
 
 export default async function Aboutus() {
   return (
@@ -64,6 +65,7 @@ export default async function Aboutus() {
             <h1 className="text-3xl font-bold text-[#A22823] mb-10">
               Познакомьтесь с нашей командой
             </h1>
+            <EmployeeSlider />
           </div>
 
           <Reviews />

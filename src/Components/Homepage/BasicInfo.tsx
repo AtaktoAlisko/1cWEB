@@ -34,10 +34,11 @@ export default function BasicInfo() {
                 эффективности деятельности, предусматриваем развитие передовых
                 управленческих и информационных технологий.
               </p>
+              {/* Conditional text display based on state and screen size */}
               <p
                 className={`mb-4 text-base md:text-lg leading-relaxed text-gray-700 ${
                   isOpen ? "block" : "hidden"
-                }`}
+                } md:block`}
               >
                 Компания «Softway» видит свою миссию в том, чтобы с помощью
                 современных информационных и управленческих технологий
@@ -48,12 +49,13 @@ export default function BasicInfo() {
               <p
                 className={`text-base md:text-lg leading-relaxed text-gray-700 ${
                   isOpen ? "block" : "hidden"
-                }`}
+                } md:block`}
               >
                 Как и любая другая казахстанская компания, мы являемся частью
                 нашей страны, пропитаны духом ее победы и устремлены только
                 вперед.
               </p>
+              {/* Show toggle button only on mobile screens */}
               <button
                 className="mt-4 text-[#A22823] font-semibold hover:underline md:hidden"
                 onClick={() => setIsOpen(!isOpen)}

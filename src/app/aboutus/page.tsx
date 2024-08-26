@@ -69,11 +69,11 @@ export default async function Aboutus() {
           </div>
 
           <div>
-            <h1 className="text-3xl font-bold text-[#A22823] mb-10">Наши сотрудники</h1>
+            <h1 className="text-3xl font-bold text-[#A22823] mb-10">
+              Познакомьтесь с нашей командой
+            </h1>
           </div>
-          {/* <EmojiGrid /> */}
-          {/* <ServicesCards /> */}
-          {/* <ProudNumbersBar /> */}
+
           <Reviews />
         </div>
       </div>

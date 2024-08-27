@@ -11,98 +11,84 @@ interface Project {
 // Массив с данными о проектах, использующий интерфейс Project
 const projects: Project[] = [
   {
-    title:
-      "Разработка и внедрение программного комплекса для управления лизинговой компанией",
-    description: "Описание проекта о лизинговой компании.",
+    title: "KazAgroFinance",
+    description:
+      "Разработка и внедрение программного комплекса для управления лизинговой компанией.",
     logo: "../logo/logo1.png", // замените на актуальное имя файла логотипа
   },
   {
-    title:
+    title: "Аграрная кредитная корпорация",
+    description:
       "Разработка и внедрение программного комплекса для управления кредитной компанией",
-    description: "Описание проекта о кредитной компании.",
     logo: "../logo/logo2.png",
   },
   {
-    title: "Победитель конкурса 1С «Проект года 2017»",
-    description: "Описание победного проекта.",
+    title: "Фонд Финансовой Поддержки ",
+    description:
+      "Разработка и внедрение системы управления кредитованием. Система обеспечивает полный цикл управления компанией – от ввода заявок до формирования финансового результата.",
     logo: "../logo/logo3.png",
   },
   {
-    title: "Разработка и внедрение системы управления кредитованием",
+    title: "ТехноЛизинг",
     description:
-      "Система обеспечивает полный цикл управления компанией – от ввода заявок до формирования финансового результата.",
+      "Автоматизация финансового, оперативного и бухгалтерского учета в лизинговой компании.",
     logo: "../logo/logo4.png",
   },
   {
-    title:
-      "Автоматизация финансового, оперативного и бухгалтерского учета в лизинговой компании",
-    description:
-      "Автоматизация различных аспектов учета в лизинговой компании.",
+    title: "КазМедТех",
+    description: "Внедрение системы управления лизинговой компанией.",
     logo: "../logo/logo5.png",
   },
   {
-    title: "Внедрение системы управления лизинговой компанией",
-    description:
-      "Внедрение системы управления для улучшения операционной эффективности.",
+    title: "AIFC",
+    description: "Внедрение системы Управления холдингом.",
     logo: "../logo/logo6.png",
   },
   {
-    title: "Внедрение системы Управления холдингом",
-    description: "Управление операциями в рамках крупного холдинга.",
+    title: "AIFC",
+    description:
+      "Внедрение системы Управления холдингом.Совместный проект с KPMG.",
+    logo: "../logo/logo6.png",
+  },
+  {
+    title: "KPE",
+    description: "Внедрение Корпоративной системы управления предприятием .",
     logo: "../logo/logo7.png",
   },
   {
-    title: "Совместный проект с KPMG",
-    description: "Проект, выполненный в партнерстве с KPMG.",
+    title: "kazmedia",
+    description: "Корпоративная система для улучшения управления предприятием.",
     logo: "../logo/logo8.png",
   },
   {
-    title: "Внедрение Корпоративной системы управления предприятием",
-    description: "Корпоративная система для улучшения управления предприятием.",
-    logo: "../logo/log10.png",
-  },
-  {
-    title: "КазАгро",
+    title: "AGROGARANT",
     description: "Проект для компании КазАгро.",
     logo: "../logo/logo9.png",
   },
   {
-    title: "ЗаманБанк",
+    title: "БРК-Лизинг",
     description: "Проект для компании ЗаманБанк.",
-    logo: "zamanbank-logo.png",
-  },
-  {
-    title: "ФортеЛизинг (ForteLeasing) АО",
-    description: "Проект для компании ФортеЛизинг (ForteLeasing) АО.",
-    logo: "forteleasing-logo.png",
-  },
-  {
-    title: "Экспортная страховая компания KazakhExport",
-    description:
-      "Проект для компании Экспортная страховая компания KazakhExport.",
-    logo: "kazakhexport-logo.png",
-  },
-  {
-    title:
-      'Республиканское государственное предприятие на праве хозяйственного ведения "Национальный центр биотехнологии" Комитета науки Министерства образования и науки Республики Казахстан',
-    description: "Проект для Национального центра биотехнологии.",
-    logo: "biotechnology-center-logo.png",
+    logo: "../logo/logo10.png",
   },
 ];
 
 // Компонент для отображения информации о проекте с типизацией
 function ProjectCard({ title, description, logo }: Project) {
   return (
-    <div className="border p-4 rounded-md shadow-md flex flex-col items-center">
-      <Image
-        src={`/logos/${logo}`}
-        alt={`${title} logo`}
-        width={100}
-        height={100}
-        className="mb-4"
-      />
-      <h3 className="text-xl font-bold text-center">{title}</h3>
-      <p className="text-center">{description}</p>
+    <div className="border p-6 rounded-lg shadow-lg flex flex-col items-center transition-transform transform hover:scale-105 bg-white">
+      <div className="w-full h-40 flex justify-center items-center mb-6 bg-gray-100 rounded-md overflow-hidden">
+        <Image
+          src={`/logos/${logo}`}
+          alt={`${title} logo`}
+          width={200}
+          height={100}
+          className="object-contain h-full"
+        />
+      </div>
+      <h3 className="text-xl font-bold text-center text-gray-800 mb-4">
+        {title}
+      </h3>
+      <p className="text-center text-gray-600">{description}</p>
     </div>
   );
 }
@@ -111,12 +97,12 @@ function ProjectCard({ title, description, logo }: Project) {
 export default function Projects() {
   return (
     <>
-      <div className="bg-white px-[20px] sm:px-[60px] md:px-[80px] lg:px-[100px] xl:px-[140px] xl:pb-[40px] border-b border-[#A22823] mt-[100px]">
-        <div className="border-t-[10px] border-[#A22823] rounded-sm"></div>
-        <h2 className="text-center text-3xl font-extrabold text-[#A22823] mt-12 mb-12 sm:text-4xl md:text-5xl">
+      <div className="bg-gradient-to-r from-gray-100 to-gray-200 px-6 sm:px-16 md:px-24 lg:px-32 xl:px-40 py-16">
+        <div className="border-t-4 border-red-600 rounded-sm"></div>
+        <h2 className="text-center text-4xl font-extrabold text-red-600 mt-12 mb-12 sm:text-5xl md:text-6xl">
           Выполненные проекты
         </h2>
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 mt-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 mt-8">
           {projects.map((project, index) => (
             <ProjectCard
               key={index}

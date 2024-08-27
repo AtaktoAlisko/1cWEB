@@ -58,16 +58,16 @@ const ContactUs = () => {
         </div>
 
         <div className="relative border-2 border-[#A22823] rounded-lg shadow-lg">
-          <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2503.817207851296!2d71.42064427701843!3d51.1302796381827!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x424586a030d2394f%3A0xae544ee78e269a2a!2s1%2C%20Dinmukhamed%20Qonayev%20St%208%2C%20Astana%20020000%2C%20Kazakhstan!5e0!3m2!1sen!2spl!4v1722768531057!5m2!1sen!2spl"
-            width="100%"
-            height="100%"
-            frameBorder="0"
-            style={{ border: 0, borderRadius: "8px" }}
-            allowFullScreen
-            aria-hidden="false"
-            title="Google Maps"
-          ></iframe>
+        <iframe
+    src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d8410.625670734771!2d71.4357788074902!3d51.128167057220246!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e1!3m2!1sen!2scz!4v1724790122750!5m2!1sen!2scz"
+    width="100%"
+    height="100%"
+    frameBorder="0"
+    style={{ border: 0, borderRadius: "8px" }}
+    allowFullScreen
+    aria-hidden="false"
+    title="Google Maps"
+  ></iframe>
         </div>
       </div>
     </div>

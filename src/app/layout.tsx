@@ -2,9 +2,7 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 import Header from "../Components/Header";
-import Footer from "../Components/Footer";
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
+import Footer from "../Components/Footer"; 
 
 const inter = Inter({ subsets: ["latin"] });
 

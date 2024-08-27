@@ -2,6 +2,8 @@ import React from "react";
 import Image from "next/image";
 import Link from "next/link";
 import ServicesSidebar from "@/Components/ServicesSidebar";
+import ServicesAdv from '@/Components/ServicesAdv';
+
 
 const ERPManagementPage: React.FC = () => {
     return (
@@ -118,6 +120,8 @@ const ERPManagementPage: React.FC = () => {
                                 </ul>
                             </section>
                         </div>
+                        <ServicesAdv />
+
                     </main>
                 </div>
             </div>

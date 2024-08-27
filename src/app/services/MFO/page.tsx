@@ -2,6 +2,8 @@ import React from "react";
 import Image from "next/image";
 import Link from "next/link";
 import ServicesSidebar from "@/Components/ServicesSidebar";
+import ServicesAdv from '@/Components/ServicesAdv';
+
 
 const CreditManagementPage: React.FC = () => {
     return (
@@ -122,6 +124,7 @@ const CreditManagementPage: React.FC = () => {
                                 </ul>
                             </div>
                         </section>
+                        <ServicesAdv />
                     </main>
                 </div>
             </div>

@@ -71,11 +71,9 @@ const projects: Project[] = [
     logo: "../logo/logo10.png",
   },
 ];
-
-// Компонент для отображения информации о проекте с типизацией
 function ProjectCard({ title, description, logo }: Project) {
   return (
-    <div className="border p-6 rounded-lg shadow-lg flex flex-col items-center transition-transform transform hover:scale-105 bg-white">
+    <div className="border border-gray-200 p-6 rounded-lg shadow-lg flex flex-col items-center transition-transform transform hover:scale-105 bg-white">
       <div className="w-full h-40 flex justify-center items-center mb-6 bg-gray-100 rounded-md overflow-hidden">
         <Image
           src={`/logos/${logo}`}
@@ -85,7 +83,7 @@ function ProjectCard({ title, description, logo }: Project) {
           className="object-contain h-full"
         />
       </div>
-      <h3 className="text-xl font-bold text-center text-gray-800 mb-4">
+      <h3 className="text-xl font-bold text-center text-[#A22823] mb-4">
         {title}
       </h3>
       <p className="text-center text-gray-600">{description}</p>
@@ -93,16 +91,16 @@ function ProjectCard({ title, description, logo }: Project) {
   );
 }
 
-// Страница "Выполненные проекты"
 export default function Projects() {
   return (
-    <>
-      <div className="bg-gradient-to-r from-gray-100 to-gray-200 px-6 sm:px-16 md:px-24 lg:px-32 xl:px-40 py-16">
-        <div className="border-t-4 border-red-600 rounded-sm"></div>
-        <h2 className="text-center text-4xl font-extrabold text-red-600 mt-12 mb-12 sm:text-5xl md:text-6xl">
+    <div className="bg-white px-[20px] sm:px-[60px] md:px-[80px] lg:px-[100px] xl:px-[140px] pb-[40px] mt-[100px]">
+      <div className="border-t-[10px] border-[#A22823] rounded-sm"></div>
+      
+      <div className="px-[60px] py-[40px] border border-[#A22823]">
+        <h2 className="text-center text-3xl md:text-4xl font-bold text-[#A22823] mb-12">
           Выполненные проекты
         </h2>
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 mt-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
           {projects.map((project, index) => (
             <ProjectCard
               key={index}
@@ -113,6 +111,6 @@ export default function Projects() {
           ))}
         </div>
       </div>
-    </>
+    </div>
   );
 }

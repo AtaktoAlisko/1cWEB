@@ -1,16 +1,16 @@
 import Reviews from "@/Components/Homepage/Reviews";
 import EmployeeSlider from "@/Components/EmployeeSlider";
+import Request from "@/Components/Request";
 
 export default async function Aboutus() {
   return (
     <>
-      <div className="bg-white px-[140px] pb-[40px] border-b border-[#A22823] mt-[100px]">
-        {/* Yellow Top Border */}
+      <div className="bg-white px-[20px] sm:px-[60px] md:px-[80px] lg:px-[100px] xl:px-[140px] xl:pb-[40px] border-b border-[#A22823] mt-[100px]">
         <div className="border-t-[10px] border-[#A22823] rounded-sm"></div>
 
         <div className="px-[60px] py-[40px] border border-[#A22823]">
           <div className="">
-            <h1 className="text-3xl font-bold text-[#A22823] mb-10">
+            <h1 className="text-2xl sm:text-2xl md:text-3xl text-center sm:text: font-bold text-[#A22823] mb-10">
               О Компании
             </h1>
             <p className="mb-10">
@@ -69,6 +69,8 @@ export default async function Aboutus() {
           </div>
 
           <Reviews />
+
+          <Request />
         </div>
       </div>
     </>

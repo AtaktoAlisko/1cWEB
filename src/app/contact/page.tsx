@@ -11,36 +11,36 @@ const ContactUs = () => {
               Softway Service
             </h1>
             <p className="mt-2 text-sm text-gray-600">
-              г.Астана, ДИНМУХАМЕД КОНАЕВ, 14/2, 49
+              г. Астана, ул. Динмухамед Кунаев, д. 14/2, офис 49
             </p>
           </div>
           <div>
             <h2 className="text-lg font-semibold text-gray-700">Часы работы</h2>
-            <p className="text-sm text-gray-500">Пн-ПТ: 9:00-21:00</p>
+            <p className="text-sm text-gray-500">Пн-Пт: 09:00 - 21:00</p>
+            <p className="text-sm text-gray-500">Сб-Вс: выходной</p>
           </div>
           <div>
-            <h2 className="text-lg font-semibold text-gray-700">Звоните</h2>
+            <h2 className="text-lg font-semibold text-gray-700">Контакты</h2>
             <p className="text-blue-600 text-lg md:text-xl font-bold">
-              +7 (771) 200-56-26
+              Телефон: +7 (771) 200-56-26
             </p>
             <p className="text-blue-600 text-lg md:text-xl font-bold">
-              office@softway.kz
+              Email: office@softway.kz
             </p>
           </div>
           <div>
-            <h2 className="text-lg font-semibold text-gray-700">Приезжайте</h2>
-            <p className="text-sm text-gray-500">Есильский район</p>
-            <p className="text-sm text-gray-500">Нура</p>
+            <h2 className="text-lg font-semibold text-gray-700">Адрес</h2>
+            <p className="text-sm text-gray-500">Есильский район, Нура</p>
           </div>
           <div>
             <h2 className="text-lg font-semibold text-gray-700">Наши услуги</h2>
             <ul className="list-disc list-inside text-sm text-gray-600 mt-2">
               <li>
-                Разработка и кастомизация 1С решений под уникальные нужды
+                Разработка и кастомизация 1С-решений под уникальные потребности
                 клиентов.
               </li>
               <li>Внедрение систем учета, управления и анализа.</li>
-              <li>Сопровождение и техническая поддержка 1С продуктов.</li>
+              <li>Техническая поддержка и сопровождение 1С-продуктов.</li>
               <li>Обучение и сертификация специалистов.</li>
             </ul>
           </div>
@@ -49,10 +49,10 @@ const ContactUs = () => {
               Наши достижения
             </h2>
             <p className="text-sm text-gray-600">
-              За более чем 10 лет работы мы внедрили более 500 проектов,
-              оптимизировав работу более чем 200 компаний по всей стране. Наши
-              специалисты имеют сертификаты от 1С, что подтверждает их высокий
-              уровень профессионализма.
+              За более чем 10 лет мы успешно реализовали более 500 проектов,
+              оптимизировав работу свыше 200 компаний по всей стране. Наши
+              специалисты сертифицированы компанией 1С, что подтверждает их
+              высокий профессионализм.
             </p>
           </div>
         </div>

@@ -14,57 +14,57 @@ const projects: Project[] = [
     title:
       "Разработка и внедрение программного комплекса для управления лизинговой компанией",
     description: "Описание проекта о лизинговой компании.",
-    logo: "leasing-company-logo.png", // замените на актуальное имя файла логотипа
+    logo: "../logo/logo1.png", // замените на актуальное имя файла логотипа
   },
   {
     title:
       "Разработка и внедрение программного комплекса для управления кредитной компанией",
     description: "Описание проекта о кредитной компании.",
-    logo: "credit-company-logo.png",
+    logo: "../logo/logo2.png",
   },
   {
     title: "Победитель конкурса 1С «Проект года 2017»",
     description: "Описание победного проекта.",
-    logo: "award-winner-logo.png",
+    logo: "../logo/logo3.png",
   },
   {
     title: "Разработка и внедрение системы управления кредитованием",
     description:
       "Система обеспечивает полный цикл управления компанией – от ввода заявок до формирования финансового результата.",
-    logo: "credit-management-system-logo.png",
+    logo: "../logo/logo4.png",
   },
   {
     title:
       "Автоматизация финансового, оперативного и бухгалтерского учета в лизинговой компании",
     description:
       "Автоматизация различных аспектов учета в лизинговой компании.",
-    logo: "financial-automation-logo.png",
+    logo: "../logo/logo5.png",
   },
   {
     title: "Внедрение системы управления лизинговой компанией",
     description:
       "Внедрение системы управления для улучшения операционной эффективности.",
-    logo: "leasing-management-logo.png",
+    logo: "../logo/logo6.png",
   },
   {
     title: "Внедрение системы Управления холдингом",
     description: "Управление операциями в рамках крупного холдинга.",
-    logo: "holding-management-logo.png",
+    logo: "../logo/logo7.png",
   },
   {
     title: "Совместный проект с KPMG",
     description: "Проект, выполненный в партнерстве с KPMG.",
-    logo: "kpmg-logo.png",
+    logo: "../logo/logo8.png",
   },
   {
     title: "Внедрение Корпоративной системы управления предприятием",
     description: "Корпоративная система для улучшения управления предприятием.",
-    logo: "corporate-management-logo.png",
+    logo: "../logo/log10.png",
   },
   {
     title: "КазАгро",
     description: "Проект для компании КазАгро.",
-    logo: "kazagro-logo.png",
+    logo: "../logo/logo9.png",
   },
   {
     title: "ЗаманБанк",

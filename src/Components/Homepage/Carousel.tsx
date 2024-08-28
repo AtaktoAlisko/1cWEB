@@ -138,16 +138,14 @@ const Carousel = () => {
               data-aos="fade-up"
               className="text-xl mt-10 sm:text-3xl sm:mt-1 md:text-4xl lg:text-5xl xl:text-6xl drop-shadow-lg"
             >
-              Управление кредитованием
+              Управление холдингом
             </motion.h2>
             <p
               data-aos="fade-down"
               className="text-xs mt-6 mb-5 px-10 sm:text-lg sm:mt-10 sm:px-20 md:text-xl lg:text-2xl xl:text-3xl lg:px-28 leading-5 xl:leading-relaxed xl:px-40 drop-shadow-lg"
             >
-              Решение позволяет автоматизировать все бизнес-процессы выдачи,
-              учета и мониторинга кредитных/лизинговых сделок, обладая при этом
-              возможностью гибкой настройки и адаптации под специфику конкретной
-              организации.
+              Ведущее решение для эффективной автоматизации работы управляющих
+              компаний и финансовых служб бизнес-единиц холдингов.
             </p>
             <div className="relative flex items-center justify-center w-full h-full">
               <button

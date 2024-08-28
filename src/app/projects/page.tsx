@@ -1,74 +1,72 @@
 "use client";
 import Image from "next/image";
 
-// Интерфейс для описания типа проекта
 interface Project {
   title: string;
   description: string;
   logo: string;
 }
 
-// Массив с данными о проектах, использующий интерфейс Project
 const projects: Project[] = [
   {
     title: "KazAgroFinance",
     description:
       "Разработка и внедрение программного комплекса для управления лизинговой компанией.",
-    logo: "../logo/logo1.png", // замените на актуальное имя файла логотипа
+    logo: "/logo/logo1.png",
   },
   {
     title: "Аграрная кредитная корпорация",
     description:
       "Разработка и внедрение программного комплекса для управления кредитной компанией",
-    logo: "../logo/logo2.png",
+    logo: "/logo/logo2.png",
   },
   {
     title: "Фонд Финансовой Поддержки ",
     description:
       "Разработка и внедрение системы управления кредитованием. Система обеспечивает полный цикл управления компанией – от ввода заявок до формирования финансового результата.",
-    logo: "../logo/logo3.png",
+    logo: "/logo/logo3.png",
   },
   {
     title: "ТехноЛизинг",
     description:
       "Автоматизация финансового, оперативного и бухгалтерского учета в лизинговой компании.",
-    logo: "../logo/logo4.png",
+    logo: "/logo/logo4.png",
   },
   {
     title: "КазМедТех",
     description: "Внедрение системы управления лизинговой компанией.",
-    logo: "../logo/logo5.png",
+    logo: "/logo/logo5.png",
   },
   {
     title: "AIFC",
     description: "Внедрение системы Управления холдингом.",
-    logo: "../logo/logo6.png",
+    logo: "/logo/logo6.png",
   },
   {
     title: "AIFC",
     description:
       "Внедрение системы Управления холдингом.Совместный проект с KPMG.",
-    logo: "../logo/logo6.png",
+    logo: "/logo/logo6.png",
   },
   {
     title: "KPE",
     description: "Внедрение Корпоративной системы управления предприятием .",
-    logo: "../logo/logo7.png",
+    logo: "/logo/logo7.png",
   },
   {
     title: "kazmedia",
     description: "Корпоративная система для улучшения управления предприятием.",
-    logo: "../logo/logo8.png",
+    logo: "/logo/logo8.png",
   },
   {
     title: "AGROGARANT",
     description: "Проект для компании КазАгро.",
-    logo: "../logo/logo9.png",
+    logo: "/logo/logo9.png",
   },
   {
     title: "БРК-Лизинг",
     description: "Проект для компании ЗаманБанк.",
-    logo: "../logo/logo10.png",
+    logo: "/logo/logo10.png",
   },
 ];
 function ProjectCard({ title, description, logo }: Project) {
@@ -95,7 +93,7 @@ export default function Projects() {
   return (
     <div className="bg-white px-[20px] sm:px-[60px] md:px-[80px] lg:px-[100px] xl:px-[140px] pb-[40px] mt-[100px]">
       <div className="border-t-[10px] border-[#A22823] rounded-sm"></div>
-      
+
       <div className="px-[60px] py-[40px] border border-[#A22823]">
         <h2 className="text-center text-3xl md:text-4xl font-bold text-[#A22823] mb-12">
           Выполненные проекты

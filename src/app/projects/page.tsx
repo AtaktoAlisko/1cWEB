@@ -1,5 +1,6 @@
 "use client";
 import Image from "next/image";
+import logo1 from "../../../public/logo/logo1.png";
 
 interface Project {
   title: string;
@@ -74,7 +75,7 @@ function ProjectCard({ title, description, logo }: Project) {
     <div className="border border-gray-200 p-6 rounded-lg shadow-lg flex flex-col items-center transition-transform transform hover:scale-105 bg-white">
       <div className="w-full h-40 flex justify-center items-center mb-6 bg-gray-100 rounded-md overflow-hidden">
         <Image
-          src={`/logos/${logo}`}
+          src={`${logo}`}
           alt={`${title} logo`}
           width={200}
           height={100}

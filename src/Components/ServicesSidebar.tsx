@@ -3,6 +3,9 @@
 import React, { useState } from "react";
 import Link from "next/link";
 import Modal from "./Modal";
+import { FaDownload } from "react-icons/fa"; // Import an icon for download
+import Image from "next/image"; // Import Image component for Next.js
+import ERPCl from "../../public/ERPCl.png";
 
 const SidebarMenu: React.FC = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -45,10 +48,24 @@ const SidebarMenu: React.FC = () => {
       </nav>
       <div className="mt-8 space-y-4">
         <a
+          href="https://umfo.erpcloud.kz/ru/home"
+          className="flex items-center bg-black text-white p-3 rounded-lg text-center hover:bg-red-700 transition-colors"
+        >
+          <Image
+            src={ERPCl}
+            alt="ERP Cloud"
+            width={24}
+            height={24}
+            className="mr-2"
+          />
+          ERP Cloud
+        </a>
+        <a
           href="/presentation.pdf"
           download
-          className="block bg-red-600 text-white p-3 rounded-lg text-center hover:bg-red-700 transition-colors"
+          className="flex items-center bg-red-600 text-white p-3 rounded-lg text-center hover:bg-red-700 transition-colors"
         >
+          <FaDownload className="mr-2" />
           Скачайте презентацию
         </a>
 

@@ -128,6 +128,14 @@ export default function Header() {
                   Контакты
                 </a>
               </li>
+              <li className="max-lg:border-b max-lg:py-3 px-3">
+                <a
+                  href="https://umfo.erpcloud.kz/ru/home"
+                  className="hover:text-[#a2382b] text-[#333] block font-bold text-[15px]"
+                >
+                  ERP Cloud
+                </a>
+              </li>
             </ul>
           </div>
 

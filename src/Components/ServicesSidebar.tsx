@@ -13,9 +13,12 @@ const SidebarMenu: React.FC = () => {
 
   const menuItems = [
     { title: "1С:ERP Управление предприятием", link: "/services/ERP" },
-    { title: "IT-аудит и оптимизация 1С", link: "#" },
-    { title: "Автоматизация бизнес-процессов", link: "#" },
-    { title: "Техническое сопровождение информационных систем", link: "#" },
+    { title: "IT-аудит и оптимизация 1С", link: "/services/It" },
+    { title: "Автоматизация бизнес-процессов", link: "/services/Automation" },
+    {
+      title: "Техническое сопровождение информационных систем",
+      link: "/services/Info",
+    },
     { title: "1С:Управление холдингом", link: "/services/Holding" },
     {
       title: "Управление микрофинансовой организацией (МФО)",

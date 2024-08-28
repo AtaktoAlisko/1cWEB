@@ -13,9 +13,19 @@ export default function Header() {
     script.async = true;
     document.body.appendChild(script);
 
-    // Cleanup script on component unmount
+    // Add custom CSS to adjust JivoChat widget position
+    const style = document.createElement("style");
+    style.textContent = `
+      #jivo-widget-container {
+        margin-left: 20px !important; /* Adjust the value as needed */
+      }
+    `;
+    document.head.appendChild(style);
+
+    // Cleanup script and style on component unmount
     return () => {
       document.body.removeChild(script);
+      document.head.removeChild(style);
     };
   }, []);
 
@@ -69,9 +79,7 @@ export default function Header() {
 
             <ul className="lg:flex lg:gap-x-5 max-lg:space-y-3 max-lg:fixed max-lg:bg-white max-lg:w-1/2 max-lg:min-w-[300px] max-lg:top-0 max-lg:left-0 max-lg:p-6 max-lg:h-full max-lg:shadow-md max-lg:overflow-auto z-50">
               <li className="mb-6 hidden max-lg:block">
-                <a
-                // href="javascript:void(0)"
-                >
+                <a>
                   <Image src="/logo.png" alt="logo" width={144} height={36} />
                 </a>
               </li>
@@ -92,10 +100,7 @@ export default function Header() {
                 </a>
               </li>
               <li className="max-lg:border-b max-lg:py-3 px-3">
-                <a
-                  // href="javascript:void(0)"
-                  className="hover:text-[#a2382b] text-[#333] block font-bold text-[15px]"
-                >
+                <a className="hover:text-[#a2382b] text-[#333] block font-bold text-[15px]">
                   Продукты
                 </a>
               </li>
@@ -110,7 +115,6 @@ export default function Header() {
               <li className="max-lg:border-b max-lg:py-3 px-3">
                 <a
                   href="/projects"
-                  // href="javascript:void(0)"
                   className="hover:text-[#a2382b] text-[#333] block font-bold text-[15px]"
                 >
                   Выполненные проекты

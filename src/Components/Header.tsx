@@ -1,4 +1,5 @@
 "use client";
+"use client";
 
 import { useState, useEffect } from "react";
 import Image from "next/image";
@@ -51,13 +52,13 @@ export default function Header() {
   return (
     <>
       <header className="fixed top-0 left-0 w-full text-white shadow-md font-sans tracking-wide z-50">
-        <div className="flex flex-wrap items-center justify-between gap-4 px-10 py-4 bg-white min-h-[70px]">
+        <div className="flex flex-wrap items-center justify-between gap-4 px-8 py-4 bg-white min-h-[70px]">
           <a href="/">
             <Image src="/logo.png" alt="logo" width={144} height={36} />
           </a>
           <div
             id="collapseMenu"
-            className={`lg:flex bg-opacity-85 lg:gap-x-5 ${
+            className={`lg:flex bg-opacity-85 lg:gap-x-3 ${
               isMenuOpen ? "" : "hidden"
             }`}
           >
@@ -77,61 +78,61 @@ export default function Header() {
               </svg>
             </button>
 
-            <ul className="lg:flex lg:gap-x-5 max-lg:space-y-3 max-lg:fixed max-lg:bg-white max-lg:w-1/2 max-lg:min-w-[300px] max-lg:top-0 max-lg:left-0 max-lg:p-6 max-lg:h-full max-lg:shadow-md max-lg:overflow-auto z-50">
+            <ul className="lg:flex lg:gap-x-3 max-lg:space-y-3 max-lg:fixed max-lg:bg-white max-lg:w-1/2 max-lg:min-w-[300px] max-lg:top-0 max-lg:left-0 max-lg:p-6 max-lg:h-full max-lg:shadow-md max-lg:overflow-auto z-50">
               <li className="mb-6 hidden max-lg:block">
                 <a>
                   <Image src="/logo.png" alt="logo" width={144} height={36} />
                 </a>
               </li>
-              <li className="max-lg:border-b max-lg:py-3 px-3">
+              <li className="max-lg:border-b max-lg:py-3 px-2">
                 <a
                   href="/"
-                  className="hover:text-[#a2382b] text-[#333] block font-bold text-[15px]"
+                  className="hover:text-[#a2382b] text-[#333] block font-bold text-[14px]"
                 >
                   Главная
                 </a>
               </li>
-              <li className="max-lg:border-b max-lg:py-3 px-3">
+              <li className="max-lg:border-b max-lg:py-3 px-2">
                 <a
                   href="/aboutus"
-                  className="hover:text-[#a2382b] text-[#333] block font-bold text-[15px]"
+                  className="hover:text-[#a2382b] text-[#333] block font-bold text-[14px]"
                 >
                   О нас
                 </a>
               </li>
-              <li className="max-lg:border-b max-lg:py-3 px-3">
-                <a className="hover:text-[#a2382b] text-[#333] block font-bold text-[15px]">
+              <li className="max-lg:border-b max-lg:py-3 px-2">
+                <a className="hover:text-[#a2382b] text-[#333] block font-bold text-[14px]">
                   Продукты
                 </a>
               </li>
-              <li className="max-lg:border-b max-lg:py-3 px-3">
+              <li className="max-lg:border-b max-lg:py-3 px-2">
                 <a
                   href="/services"
-                  className="hover:text-[#a2382b] text-[#333] block font-bold text-[15px]"
+                  className="hover:text-[#a2382b] text-[#333] block font-bold text-[14px]"
                 >
                   Услуги
                 </a>
               </li>
-              <li className="max-lg:border-b max-lg:py-3 px-3">
+              <li className="max-lg:border-b max-lg:py-3 px-2">
                 <a
                   href="/projects"
-                  className="hover:text-[#a2382b] text-[#333] block font-bold text-[15px]"
+                  className="hover:text-[#a2382b] text-[#333] block font-bold text-[14px]"
                 >
                   Выполненные проекты
                 </a>
               </li>
-              <li className="max-lg:border-b max-lg:py-3 px-3">
+              <li className="max-lg:border-b max-lg:py-3 px-2">
                 <a
                   href="/contact"
-                  className="hover:text-[#a2382b] text-[#333] block font-bold text-[15px]"
+                  className="hover:text-[#a2382b] text-[#333] block font-bold text-[14px]"
                 >
                   Контакты
                 </a>
               </li>
-              <li className="max-lg:border-b max-lg:py-3 px-3">
+              <li className="max-lg:border-b max-lg:py-3 px-2">
                 <a
                   href="https://umfo.erpcloud.kz/ru/home"
-                  className="hover:text-[#a2382b] text-[#333] block font-bold text-[15px]"
+                  className="hover:text-[#a2382b] text-[#333] block font-bold text-[14px]"
                 >
                   ERP Cloud
                 </a>

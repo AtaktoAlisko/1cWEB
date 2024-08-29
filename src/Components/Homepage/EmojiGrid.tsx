@@ -1,39 +1,78 @@
 "use client";
-import React from "react";
+import React, { useEffect, useState } from 'react';
+import { motion } from 'framer-motion';
 
-const departments = [
-  { name: "Комплексный подход", icon: "🧩" },
-  { name: "Ответственность", icon: "👔" },
-  { name: "Большой проект", icon: "💼" },
-  { name: "Надежность", icon: "🛡️" },
-  { name: "Квалификация специалистов", icon: "🎓" },
-  { name: "Опыт", icon: "📚" },
-  { name: "Доступность", icon: "🟢" },
-  { name: "Поддержка", icon: "🤝" },
-];
+interface Department {
+  name: string;
+  icon: string;
+}
 
-const EmojiGrid = () => {
+interface FloatingCardProps {
+  department: Department;
+  index: number;
+}
+
+const FloatingCard: React.FC<FloatingCardProps> = ({ department, index }) => {
+  const [position, setPosition] = useState({ x: 0, y: 0 });
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      const angle = (Date.now() + index * 1000) / 1000; // Уникальный угол для каждой карточки
+      const x = Math.sin(angle) * 20; // Амплитуда по X
+      const y = Math.cos(angle) * 20; // Амплитуда по Y
+      setPosition({ x, y });
+    }, 50); // Обновляем каждые 50мс для плавности
+
+    return () => clearInterval(interval);
+  }, [index]);
+
   return (
-    <>
-      <h2 className="text-center text-3xl font-extrabold text-[#A22823] mt-12 mb-12 sm:text-4xl md:text-5xl">
+    <motion.div
+      className="bg-white p-6 rounded-lg border-2 border-[#A22823] shadow-lg"
+      animate={{ 
+        x: position.x,
+        y: position.y,
+      }}
+      transition={{ 
+        type: "spring",
+        stiffness: 50,
+        damping: 20
+      }}
+    >
+      <div className="text-5xl mb-4 flex justify-center">{department.icon}</div>
+      <p className="text-center font-semibold text-gray-800">{department.name}</p>
+    </motion.div>
+  );
+};
+
+const EmojiGrid: React.FC = () => {
+  const departments: Department[] = [
+    { name: "Комплексный подход", icon: "🧩" },
+    { name: "Ответственность", icon: "👔" },
+    { name: "Большой проект", icon: "💼" },
+    { name: "Надежность", icon: "🛡️" },
+    { name: "Квалификация специалистов", icon: "🎓" },
+    { name: "Опыт", icon: "📚" },
+    { name: "Доступность", icon: "🟢" },
+    { name: "Поддержка", icon: "🤝" }
+  ];
+
+  return (
+    <div className="bg-gradient-to-br from-gray-100 to-gray-200 py-16 min-h-screen flex flex-col justify-center">
+      <motion.h2 
+        className="text-center text-4xl font-extrabold text-[#A22823] mb-12"
+        initial={{ opacity: 0, y: -50 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.5 }}
+      >
         Почему выбирают нас?
-      </h2>
-      <div className="grid text-sm grid-cols-2 sm:grid-cols-2 md:grid-cols-4 gap-10 p-6 mx-auto max-w-screen-xl mt-12 mb-24">
+      </motion.h2>
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 max-w-7xl mx-auto px-4">
         {departments.map((dept, index) => (
-          <div
-            key={index}
-            className="flex flex-col items-center justify-center bg-gradient-to-b from-white to-gray-50 p-8 rounded-2xl border border-[#A22823] shadow-lg transition-transform transform hover:scale-105 hover:shadow-xl hover:border-transparent hover:bg-gradient-to-b hover:from-[#A22823] hover:to-[#c0392b] hover:text-white"
-          >
-            <div className="text-6xl mb-4 text-[#A22823] transition-colors duration-300 hover:text-white">
-              {dept.icon}
-            </div>
-            <div className="text-sm sm:text-base md:text-base lg:text-lg font-semibold text-gray-700 text-center transition-colors duration-300 hover:text-white">
-              {dept.name}
-            </div>
-          </div>
+          <FloatingCard key={index} department={dept} index={index} />
         ))}
       </div>
-    </>
+    </div>
   );
 };
 

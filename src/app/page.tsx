@@ -11,11 +11,14 @@ import Footer from "../Components/Footer";
 import OurBar from '../Components/Homepage/OurBar';
 import ServicesCards from '../Components/Homepage/ServicesCards';
 import ServicesCarousel from "./services/page";
+import ThemeSwitcher from '../Components/ThemeSwitcher';
+
 
 export default function Home() {
   return (
     <>
       <Carousel />
+      <ThemeSwitcher />
       <BasicInfo />
 
       <DepartmentGrid />

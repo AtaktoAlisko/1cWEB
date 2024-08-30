@@ -1,8 +1,9 @@
 "use client";
-"use client";
 
 import { useState, useEffect } from "react";
 import Image from "next/image";
+import ThemeSwitcher from '../Components/ThemeSwitcher';  // Make sure this path is correct
+
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -52,9 +53,22 @@ export default function Header() {
   return (
     <>
       <header className="fixed top-0 left-0 w-full text-white shadow-md font-sans tracking-wide z-50">
-        <div className="flex flex-wrap items-center justify-between gap-4 px-8 py-4 bg-white min-h-[70px]">
+        <div className="flex flex-wrap items-center justify-between gap-4 px-8 py-4 bg-white dark:bg-[#121212] min-h-[70px]">
           <a href="/">
-            <Image src="/logo.png" alt="logo" width={144} height={36} />
+            <Image 
+              src="/logo.png" 
+              alt="logo" 
+              width={144} 
+              height={36} 
+              className="dark:hidden"
+            />
+            <Image 
+              src="/logoDark.png" 
+              alt="logo" 
+              width={144} 
+              height={36} 
+              className="hidden dark:block"
+            />
           </a>
           <div
             id="collapseMenu"
@@ -64,13 +78,13 @@ export default function Header() {
           >
             <button
               id="toggleClose"
-              className={`lg:hidden fixed top-4 right-7 z-[100] w-10 h-10 bg-white flex items-center justify-center rounded ${
+              className={`lg:hidden fixed top-4 right-7 z-[100] w-10 h-10 bg-white dark:bg-gray-800 flex items-center justify-center rounded ${
                 isMenuOpen ? "" : "hidden"
               }`}
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
-                className="w-4 h-4 fill-black"
+                className="w-4 h-4 fill-black dark:fill-white"
                 viewBox="0 0 320.591 320.591"
               >
                 <path d="M30.391 318.583a30.37 30.37 0 0 1-21.56-7.288c-11.774-11.844-11.774-30.973 0-42.817L266.643 10.665c12.246-11.459 31.462-10.822 42.921 1.424 10.362 11.074 10.966 28.095 1.414 39.875L51.647 311.295a30.366 30.366 0 0 1-21.256 7.288z"></path>
@@ -78,7 +92,7 @@ export default function Header() {
               </svg>
             </button>
 
-            <ul className="lg:flex lg:gap-x-3 max-lg:space-y-3 max-lg:fixed max-lg:bg-white max-lg:w-1/2 max-lg:min-w-[300px] max-lg:top-0 max-lg:left-0 max-lg:p-6 max-lg:h-full max-lg:shadow-md max-lg:overflow-auto z-50">
+            <ul className="lg:flex lg:gap-x-3 max-lg:space-y-3 max-lg:fixed max-lg:bg-white dark:max-lg:bg-gray-800 max-lg:w-1/2 max-lg:min-w-[300px] max-lg:top-0 max-lg:left-0 max-lg:p-6 max-lg:h-full max-lg:shadow-md max-lg:overflow-auto z-50">
               <li className="mb-6 hidden max-lg:block">
                 <a>
                   <Image src="/logo.png" alt="logo" width={144} height={36} />
@@ -87,7 +101,7 @@ export default function Header() {
               <li className="max-lg:border-b max-lg:py-3 px-2">
                 <a
                   href="/"
-                  className="hover:text-[#a2382b] text-[#333] block font-bold text-[14px]"
+                  className="hover:text-[#a2382b] text-[#333] dark:text-gray-200 block font-bold text-[14px]"
                 >
                   Главная
                 </a>
@@ -95,20 +109,20 @@ export default function Header() {
               <li className="max-lg:border-b max-lg:py-3 px-2">
                 <a
                   href="/aboutus"
-                  className="hover:text-[#a2382b] text-[#333] block font-bold text-[14px]"
+                  className="hover:text-[#a2382b] text-[#333] dark:text-gray-200 block font-bold text-[14px]"
                 >
                   О нас
                 </a>
               </li>
               <li className="max-lg:border-b max-lg:py-3 px-2">
-                <a className="hover:text-[#a2382b] text-[#333] block font-bold text-[14px]">
+                <a className="hover:text-[#a2382b] text-[#333] dark:text-gray-200 block font-bold text-[14px]">
                   Продукты
                 </a>
               </li>
               <li className="max-lg:border-b max-lg:py-3 px-2">
                 <a
                   href="/services"
-                  className="hover:text-[#a2382b] text-[#333] block font-bold text-[14px]"
+                  className="hover:text-[#a2382b] text-[#333] dark:text-gray-200 block font-bold text-[14px]"
                 >
                   Услуги
                 </a>
@@ -116,7 +130,7 @@ export default function Header() {
               <li className="max-lg:border-b max-lg:py-3 px-2">
                 <a
                   href="/projects"
-                  className="hover:text-[#a2382b] text-[#333] block font-bold text-[14px]"
+                  className="hover:text-[#a2382b] text-[#333] dark:text-gray-200 block font-bold text-[14px]"
                 >
                   Выполненные проекты
                 </a>
@@ -124,7 +138,7 @@ export default function Header() {
               <li className="max-lg:border-b max-lg:py-3 px-2">
                 <a
                   href="/contact"
-                  className="hover:text-[#a2382b] text-[#333] block font-bold text-[14px]"
+                  className="hover:text-[#a2382b] text-[#333] dark:text-gray-200 block font-bold text-[14px]"
                 >
                   Контакты
                 </a>
@@ -132,11 +146,12 @@ export default function Header() {
               <li className="max-lg:border-b max-lg:py-3 px-2">
                 <a
                   href="https://umfo.erpcloud.kz/ru/home"
-                  className="hover:text-[#a2382b] text-[#333] block font-bold text-[14px]"
+                  className="hover:text-[#a2382b] text-[#333] dark:text-gray-200 block font-bold text-[14px]"
                 >
                   ERP Cloud
                 </a>
               </li>
+              
             </ul>
           </div>
 
@@ -147,7 +162,7 @@ export default function Header() {
             >
               <svg
                 className="w-7 h-7"
-                fill="#000"
+                fill="#000000"
                 viewBox="0 0 20 20"
                 xmlns="http://www.w3.org/2000/svg"
               >

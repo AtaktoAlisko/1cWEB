@@ -50,17 +50,17 @@ const Reviews: React.FC = () => {
 
   return (
     <div className="max-w-screen-lg mx-auto px-4 py-8">
-      <h2 className="text-center text-3xl font-extrabold text-[#A22823] mt-12 mb-12 sm:text-4xl md:text-5xl">
+      <h2 className="text-center text-3xl font-extrabold text-[#A22823] dark:text-[#FF5B56] mt-12 mb-12 sm:text-4xl md:text-5xl">
         Отзывы о нас
       </h2>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
         {reviews.map((review, index) => (
           <div
             key={index}
-            className="bg-white shadow-lg rounded-lg p-6 border border-[#A22823] transition-all duration-300 ease-in-out"
+            className="bg-white dark:bg-gray-800 shadow-lg rounded-lg p-6 border border-[#A22823] dark:border-[#FF5B56] transition-all duration-300 ease-in-out"
           >
             <div className="flex items-center mb-4">
-              <div className="w-32 h-19 bg-gray-300 mr-4">
+              <div className="w-32 h-19 bg-gray-300 dark:bg-gray-300 mr-4">
                 <img
                   src={review.image}
                   alt={review.name}
@@ -68,14 +68,14 @@ const Reviews: React.FC = () => {
                 />
               </div>
               <div>
-                <h4 className="font-bold text-lg text-gray-900">
+                <h4 className="font-bold text-lg text-gray-900 dark:text-gray-100">
                   {review.name}
                 </h4>
-                <p className="text-gray-500 text-sm">{review.date}</p>
+                <p className="text-gray-500 dark:text-gray-400 text-sm">{review.date}</p>
               </div>
             </div>
             <p
-              className={`mb-4 transition-all duration-300 ease-in-out ${
+              className={`mb-4 transition-all duration-300 ease-in-out text-gray-700 dark:text-gray-300 ${
                 expanded === index ? "line-clamp-none" : "line-clamp-3"
               }`}
             >
@@ -83,7 +83,7 @@ const Reviews: React.FC = () => {
             </p>
             <button
               onClick={() => toggleExpand(index)}
-              className="text-[#A22823] hover:underline focus:outline-none"
+              className="text-[#A22823] dark:text-[#FF5B56] hover:underline focus:outline-none"
             >
               {expanded === index ? "Свернуть" : "Развернуть"}
             </button>

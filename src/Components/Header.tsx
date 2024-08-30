@@ -92,11 +92,24 @@ export default function Header() {
               </svg>
             </button>
 
-            <ul className="lg:flex lg:gap-x-3 max-lg:space-y-3 max-lg:fixed max-lg:bg-white dark:max-lg:bg-gray-800 max-lg:w-1/2 max-lg:min-w-[300px] max-lg:top-0 max-lg:left-0 max-lg:p-6 max-lg:h-full max-lg:shadow-md max-lg:overflow-auto z-50">
+            <ul className="lg:flex lg:gap-x-3 max-lg:space-y-3 max-lg:fixed max-lg:bg-white dark:max-lg:bg-[#121212] max-lg:w-1/2 max-lg:min-w-[300px] max-lg:top-0 max-lg:left-0 max-lg:p-6 max-lg:h-full max-lg:shadow-md max-lg:overflow-auto z-50">
               <li className="mb-6 hidden max-lg:block">
-                <a>
-                  <Image src="/logo.png" alt="logo" width={144} height={36} />
-                </a>
+              <a href="/">
+            <Image 
+              src="/logo.png" 
+              alt="logo" 
+              width={144} 
+              height={36} 
+              className="dark:hidden"
+            />
+            <Image 
+              src="/logoDark.png" 
+              alt="logo" 
+              width={144} 
+              height={36} 
+              className="hidden dark:block"
+            />
+          </a>
               </li>
               <li className="max-lg:border-b max-lg:py-3 px-2">
                 <a
@@ -161,8 +174,8 @@ export default function Header() {
               className={`lg:hidden ${isMenuOpen ? "hidden" : ""}`}
             >
               <svg
-                className="w-7 h-7"
-                fill="#000000"
+                className="w-7 h-7 fill-black dark:fill-white"
+                fill="#000000" 
                 viewBox="0 0 20 20"
                 xmlns="http://www.w3.org/2000/svg"
               >

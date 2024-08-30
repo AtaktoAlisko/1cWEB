@@ -5,39 +5,38 @@ import Request from "@/Components/Request";
 export default async function Aboutus() {
   return (
     <>
-      <div className="bg-white px-[20px] sm:px-[60px] md:px-[80px] lg:px-[100px] xl:px-[140px] xl:pb-[40px] border-b border-[#A22823] mt-[100px]">
-        <div className="border-t-[10px] border-[#A22823] rounded-sm"></div>
+      <div className=" px-[20px] sm:px-[60px] md:px-[80px] lg:px-[100px] xl:px-[140px] xl:pb-[40px] border-b border-[#D23D38] mt-[100px]">
+        <div className="border-t-[10px] border-[#D23D38] rounded-sm"></div>
 
-        <div className="px-[60px] py-[40px] border border-[#A22823]">
+        <div className="px-[60px] py-[40px] border border-[#D23D38]">
         <section className="mb-16">
-            <h1 className="text-3xl md:text-4xl font-bold text-[#A22823] mb-8 text-center">
+            <h1 className="text-3xl md:text-4xl font-bold text-[#D23D38] mb-8 text-center">
               О Компании
             </h1>
             {['Наша группа компаний работает на рынке консалтинга и информационных технологий Казахстана уже более 20 лет.',
               'Мы готовы делиться своими знаниями и умениями со всеми, кто ставит перед собой амбициозные цели, готов быть выше обстоятельств и полон стремления расти. Для этого мы предоставляем своим клиентам идеи, инструменты, инфраструктуру и ресурсы для развития.',
               'Мы реализуем комплексные проекты, направленные на повышение эффективности деятельности предприятий посредством внедрения передовых управленческих и информационных технологий.',
               'Как и любая другая компания Казахстана, мы являемся неотъемлемой частью нашей страны, пропитаны духом ее побед и устремлены только вперед.'].map((text, index) => (
-              <p key={index} className="text-gray-700 mb-4 leading-relaxed">{text}</p>
+              <p key={index} className="text-gray-300 mb-4 leading-relaxed">{text}</p>
             ))}
           </section>
 
           <section className="mb-16">
-            <h2 className="text-2xl md:text-3xl font-bold text-[#A22823] mb-6">Миссия</h2>
+            <h2 className="text-2xl md:text-3xl font-bold text-[#D23D38] mb-6">Миссия</h2>
             {['Мы видим свою миссию в том, чтобы с помощью современных информационных и управленческих технологий способствовать казахстанским, международным и государственным организациям в достижении качественно нового уровня эффективности (управления).',
               'Мы стремимся быть как можно более отзывчивыми и внимательными к нуждам наших клиентов и предлагаем им эффективный процесс изменений, делающий их работу максимально полезной и обеспечивающий ожидаемый качественный результат. Компания постоянно наращивает базу знаний и совершенствует разрабатываемое программное обеспечение, чтобы клиентs могли в полной мере воспользоваться преимуществами новых технологий.',
               'Мы намерены упрочить свое положение на целевом рынке Казахстана, предлагая клиентам помимо передовых обоснованных решений, также и самый высокий уровень обслуживания. Мы рассматриваем индивидуальный подход к нашим клиентам и партнерам как ключевой фактор успеха компании.'].map((text, index) => (
-              <p key={index} className="text-gray-700 mb-4 leading-relaxed">{text}</p>
+              <p key={index} className="text-gray-300 mb-4 leading-relaxed">{text}</p>
             ))}
           </section>
 
           <section className="mb-16">
-            <h2 className="text-2xl md:text-3xl font-bold text-[#A22823] mb-6">
+            <h2 className="text-2xl md:text-3xl font-bold text-[#D23D38] mb-6">
               Познакомьтесь с нашей командой
             </h2>
             <EmployeeSlider />
           </section>
             
-
           <Reviews />
 
           <Request />

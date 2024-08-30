@@ -68,8 +68,8 @@ const ServicesAdv = () => {
   ];
 
   return (
-    <section className="mb-8 sm:mb-12 bg-gray-50 rounded-lg p-4 sm:p-6 lg:p-8 shadow-sm">
-      <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-2">
+    <section className="mb-8 sm:mb-12 bg-gray-50 dark:bg-gray-800 rounded-lg p-4 sm:p-6 lg:p-8 shadow-sm">
+      <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 dark:text-white mb-2">
         Преимущества
       </h2>
       <div className="h-1 w-16 sm:w-20 bg-red-600 mb-6 sm:mb-8"></div>
@@ -77,17 +77,17 @@ const ServicesAdv = () => {
         {advantages.map((advantage, index) => (
           <div
             key={index}
-            className="bg-white rounded-lg p-4 sm:p-6 shadow-md transition duration-300 ease-in-out hover:shadow-lg flex flex-col sm:items-center sm:text-center"
+            className="bg-white dark:bg-gray-700 rounded-lg p-4 sm:p-6 shadow-md transition duration-300 ease-in-out hover:shadow-lg flex flex-col sm:items-center sm:text-center"
           >
             <div className="flex items-center sm:flex-col sm:items-center mb-4">
               <div className="bg-red-600 text-white p-3 rounded-full mr-4 sm:mr-0 sm:mb-4 flex-shrink-0">
                 {advantage.icon}
               </div>
-              <h3 className="text-lg md:text-xl font-semibold text-gray-800 sm:text-center">
+              <h3 className="text-lg md:text-xl font-semibold text-gray-800 dark:text-white sm:text-center">
                 {advantage.title}
               </h3>
             </div>
-            <p className="text-sm md:text-base text-gray-600 sm:text-center">
+            <p className="text-sm md:text-base text-gray-600 dark:text-gray-300 sm:text-center">
               {advantage.description}
             </p>
           </div>

@@ -5,7 +5,7 @@ import React from "react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import Image from "next/image"; // Import Next.js Image component
+import Image from "next/image";
 import employee1 from "../../public/employee1.jpeg"; // Replace with actual image paths
 
 const EmployeeSlider = () => {
@@ -13,7 +13,7 @@ const EmployeeSlider = () => {
     {
       name: "Мертаев Бауыржан",
       school: "125High School Aktobe",
-      image: employee1, // Use the imported image object directly
+      image: employee1,
     },
     {
       name: "Сагидуллаев Турар",
@@ -59,7 +59,7 @@ const EmployeeSlider = () => {
       <Slider {...settings}>
         {employees.map((employee, index) => (
           <div key={index} className="p-4">
-            <div className="bg-white rounded-lg shadow-lg p-6 text-center">
+            <div className="bg-gray-800 rounded-lg shadow-lg p-6 text-center">
               <Image
                 src={employee.image}
                 alt={employee.name}
@@ -67,8 +67,8 @@ const EmployeeSlider = () => {
                 height={128}
                 className="w-32 h-32 mx-auto rounded-full mb-4"
               />
-              <h3 className="text-lg font-semibold">{employee.name}</h3>
-              <p className="text-gray-600">{employee.school}</p>
+              <h3 className="text-lg font-semibold text-white">{employee.name}</h3>
+              <p className="text-gray-300">{employee.school}</p>
             </div>
           </div>
         ))}

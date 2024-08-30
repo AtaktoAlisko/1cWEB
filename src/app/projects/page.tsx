@@ -1,6 +1,6 @@
 "use client";
 import Image from "next/image";
-import logo1 from "../../../public/logo/logo1.png";
+import { useState, useEffect } from 'react';
 
 interface Project {
   title: string;
@@ -70,10 +70,11 @@ const projects: Project[] = [
     logo: "/logo/logo10.png",
   },
 ];
+
 function ProjectCard({ title, description, logo }: Project) {
   return (
-    <div className="border border-gray-200 p-6 rounded-lg shadow-lg flex flex-col items-center transition-transform transform hover:scale-105 bg-white">
-      <div className="w-full h-40 flex justify-center items-center mb-6 bg-gray-100 rounded-md overflow-hidden">
+    <div className="border border-gray-200 dark:border-gray-600 bg-white dark:bg-gray-800 p-6 rounded-lg shadow-lg flex flex-col items-center transition-transform transform hover:scale-105">
+      <div className="w-full h-40 flex justify-center items-center mb-6 bg-gray-100 dark:bg-gray-900 rounded-md overflow-hidden">
         <Image
           src={`${logo}`}
           alt={`${title} logo`}
@@ -82,21 +83,21 @@ function ProjectCard({ title, description, logo }: Project) {
           className="object-contain h-full"
         />
       </div>
-      <h3 className="text-xl font-bold text-center text-[#A22823] mb-4">
+      <h3 className="text-xl font-bold text-center text-[#D23D38] mb-4">
         {title}
       </h3>
-      <p className="text-center text-gray-600">{description}</p>
+      <p className="text-center text-gray-600 dark:text-gray-300">{description}</p>
     </div>
   );
 }
 
 export default function Projects() {
   return (
-    <div className="bg-white px-[20px] sm:px-[60px] md:px-[80px] lg:px-[100px] xl:px-[140px] pb-[40px] mt-[100px]">
-      <div className="border-t-[10px] border-[#A22823] rounded-sm"></div>
+    <div className=" text-gray-900 dark:text-gray-100 px-[20px] sm:px-[60px] md:px-[80px] lg:px-[100px] xl:px-[140px] pb-[40px] mt-[100px] transition-colors duration-300">
+      <div className="border-t-[10px] border-[#D23D38] rounded-sm"></div>
 
-      <div className="px-[60px] py-[40px] border border-[#A22823]">
-        <h2 className="text-center text-3xl md:text-4xl font-bold text-[#A22823] mb-12">
+      <div className="px-[60px] py-[40px] border border-[#D23D38] ">
+        <h2 className="text-center text-3xl md:text-4xl font-bold text-[#D23D38] mb-12">
           Выполненные проекты
         </h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">

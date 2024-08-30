@@ -4,23 +4,21 @@ import Link from "next/link";
 import ServicesSidebar from "@/Components/ServicesSidebar";
 import ServicesAdv from '@/Components/ServicesAdv';
 
-
-
 const ERPManagementPage: React.FC = () => {
   return (
-    <div className="pt-16 lg:pt-24">
+    <div className="pt-16 lg:pt-24 ">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div className="lg:flex lg:gap-8">
           <aside className="lg:w-1/4">
             <ServicesSidebar />
           </aside>
           <main className="lg:w-3/4">
-            <h1 className="text-4xl font-bold text-gray-900 mb-2">
+            <h1 className="text-4xl font-bold text-gray-900 dark:text-white mb-2">
               1С:ERP Управление предприятием
             </h1>
             <div className="h-1 w-20 bg-red-600 mb-8"></div>
 
-            <p className="text-lg text-gray-700 mb-6">
+            <p className="text-lg text-gray-700 dark:text-gray-300 mb-6">
               «1С:ERP Управление предприятием 2 для Казахстана» —инновационное
               решение для построения комплексных информационных систем
               управления деятельностью многопрофильных предприятий с учетом
@@ -28,14 +26,14 @@ const ERPManagementPage: React.FC = () => {
               среднего бизнеса.
             </p>
 
-            <p className="text-lg text-gray-700 mb-12">
+            <p className="text-lg text-gray-700 dark:text-gray-300 mb-12">
               Решение предназначено для оптимизации процесса производства,
               составления достоверного графика деятельности с учетом загрузки
               оборудования и обеспечения ресурсами.
             </p>
 
             <section className="mb-12">
-              <h2 className="text-2xl font-semibold text-gray-900 mb-6">
+              <h2 className="text-2xl font-semibold text-gray-900 dark:text-white mb-6">
                 Кому подойдет решение
               </h2>
               <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
@@ -47,7 +45,7 @@ const ERPManagementPage: React.FC = () => {
                 ].map((item, index) => (
                   <div key={index} className="flex flex-col items-center">
                     <div className="text-4xl mb-2">{item.icon}</div>
-                    <p className="text-center">{item.name}</p>
+                    <p className="text-center dark:text-gray-300">{item.name}</p>
                   </div>
                 ))}
               </div>
@@ -55,7 +53,7 @@ const ERPManagementPage: React.FC = () => {
 
             <div className="grid md:grid-cols-2 gap-12 mb-12">
               <section>
-                <h2 className="text-2xl font-semibold text-gray-900 mb-6">
+                <h2 className="text-2xl font-semibold text-gray-900 dark:text-white mb-6">
                   Возможности
                 </h2>
                 <ul className="space-y-4">
@@ -81,17 +79,17 @@ const ERPManagementPage: React.FC = () => {
                           d="M5 13l4 4L19 7"
                         />
                       </svg>
-                      <span>{item}</span>
+                      <span className="dark:text-gray-300">{item}</span>
                     </li>
                   ))}
                 </ul>
               </section>
 
               <section>
-                <h2 className="text-2xl font-semibold text-gray-900 mb-6">
+                <h2 className="text-2xl font-semibold text-gray-900 dark:text-white mb-6">
                   Подсистемы
                 </h2>
-                <div className="bg-gray-100 p-4 rounded-lg">
+                <div className="bg-gray-100 dark:bg-gray-800 p-4 rounded-lg">
                   <Image
                     src="/erp.png"
                     alt="Функциональные блоки 1С:ERP"
@@ -99,7 +97,7 @@ const ERPManagementPage: React.FC = () => {
                     height={300}
                     className="w-full h-auto"
                   />
-                  <p className="mt-4 text-sm text-gray-600">
+                  <p className="mt-4 text-sm text-gray-600 dark:text-gray-400">
                     Функциональные блоки 1С:ERP
                   </p>
                 </div>

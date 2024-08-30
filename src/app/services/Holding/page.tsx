@@ -4,35 +4,34 @@ import Link from "next/link";
 import ServicesSidebar from "@/Components/ServicesSidebar";
 import ServicesAdv from '@/Components/ServicesAdv';
 
-
 const ERPManagementPage: React.FC = () => {
     return (
-        <div className="pt-16 lg:pt-24">
+        <div className="pt-16 lg:pt-24 ">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
                 <div className="lg:flex lg:gap-8">
                     <aside className="lg:w-1/4">
                         <ServicesSidebar />
                     </aside>
                     <main className="lg:w-3/4">
-                        <h1 className="text-4xl font-bold text-gray-900 mb-2">
+                        <h1 className="text-4xl font-bold text-gray-900 dark:text-white mb-2">
                             1С:Управление холдингом
                         </h1>
                         <div className="h-1 w-20 bg-red-600 mb-8"></div>
 
-                        <h2 className="text-2xl font-semibold text-gray-900 mb-6">
+                        <h2 className="text-2xl font-semibold text-gray-900 dark:text-white mb-6">
                             Внедрение решения Управление холдингом
                         </h2>
 
-                        <p className="text-lg text-gray-700 mb-6">
+                        <p className="text-lg text-gray-700 dark:text-gray-300 mb-6">
                             Управление холдингом – комплексное решение класса CPM (Corporate Performance Management – управление эффективностью холдинга), предназначенное для автоматизации широкого спектра задач, связанных с учетом, планированием и контролем эффективности холдингов различного масштаба.
                         </p>
 
-                        <p className="text-lg text-gray-700 mb-12">
+                        <p className="text-lg text-gray-700 dark:text-gray-300 mb-12">
                             Программный продукт предназначен для комплексной автоматизации управляющих компаний холдингов
                         </p>
 
                         <section className="mb-12">
-                            <h2 className="text-2xl font-semibold text-gray-900 mb-6">
+                            <h2 className="text-2xl font-semibold text-gray-900 dark:text-white mb-6">
                                 Кому подойдет решение
                             </h2>
                             <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
@@ -44,7 +43,7 @@ const ERPManagementPage: React.FC = () => {
                                 ].map((item, index) => (
                                     <div key={index} className="flex flex-col items-center">
                                         <div className="text-4xl mb-2">{item.icon}</div>
-                                        <p className="text-center">{item.name}</p>
+                                        <p className="text-center dark:text-gray-300">{item.name}</p>
                                     </div>
                                 ))}
                             </div>
@@ -52,7 +51,7 @@ const ERPManagementPage: React.FC = () => {
 
                         <div className="grid md:grid-cols-2 gap-12 mb-12">
                             <section>
-                                <h2 className="text-2xl font-semibold text-gray-900 mb-6">
+                                <h2 className="text-2xl font-semibold text-gray-900 dark:text-white mb-6">
                                     Предназначен для следующих областей учета
                                 </h2>
                                 <ul className="space-y-4">
@@ -81,14 +80,14 @@ const ERPManagementPage: React.FC = () => {
                                                     d="M5 13l4 4L19 7"
                                                 />
                                             </svg>
-                                            <span>{item}</span>
+                                            <span className="dark:text-gray-300">{item}</span>
                                         </li>
                                     ))}
                                 </ul>
                             </section>
 
                             <section>
-                                <h2 className="text-2xl font-semibold text-gray-900 mb-6">
+                                <h2 className="text-2xl font-semibold text-gray-900 dark:text-white mb-6">
                                     Вы получаете следующие возможности
                                 </h2>
                                 <ul className="space-y-4">
@@ -114,14 +113,13 @@ const ERPManagementPage: React.FC = () => {
                                                     d="M5 13l4 4L19 7"
                                                 />
                                             </svg>
-                                            <span>{item}</span>
+                                            <span className="dark:text-gray-300">{item}</span>
                                         </li>
                                     ))}
                                 </ul>
                             </section>
                         </div>
                         <ServicesAdv />
-
                     </main>
                 </div>
             </div>

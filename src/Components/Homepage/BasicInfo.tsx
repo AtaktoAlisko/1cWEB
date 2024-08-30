@@ -24,19 +24,18 @@ export default function BasicInfo() {
             />
           </div>
           <div className="w-full md:w-1/2 flex flex-col justify-center">
-            <div className="bg-white p-6 md:p-8 rounded-lg shadow-lg border border-[#A22823]">
-              <p className="mb-4 text-base md:text-lg leading-relaxed text-gray-700">
+            <div className="bg-white dark:bg-gray-800 p-6 md:p-8 rounded-lg shadow-lg border border-[#A22823]">
+              <p className="mb-4 text-base md:text-lg leading-relaxed text-gray-700 dark:text-gray-300">
                 Компания «Softway» работает на рынке биржевого консалтинга и
                 информационных технологий в Казахстане.
               </p>
-              <p className="mb-4 text-base md:text-lg leading-relaxed text-gray-700">
+              <p className="mb-4 text-base md:text-lg leading-relaxed text-gray-700 dark:text-gray-300">
                 Мы реализуем комплексные проекты, направленные на повышение
                 эффективности деятельности, предусматриваем развитие передовых
                 управленческих и информационных технологий.
               </p>
-              {/* Conditional text display based on state and screen size */}
               <p
-                className={`mb-4 text-base md:text-lg leading-relaxed text-gray-700 ${
+                className={`mb-4 text-base md:text-lg leading-relaxed text-gray-700 dark:text-gray-300 ${
                   isOpen ? "block" : "hidden"
                 } md:block`}
               >
@@ -47,7 +46,7 @@ export default function BasicInfo() {
                 (управления).
               </p>
               <p
-                className={`text-base md:text-lg leading-relaxed text-gray-700 ${
+                className={`text-base md:text-lg leading-relaxed text-gray-700 dark:text-gray-300 ${
                   isOpen ? "block" : "hidden"
                 } md:block`}
               >
@@ -55,9 +54,8 @@ export default function BasicInfo() {
                 нашей страны, пропитаны духом ее победы и устремлены только
                 вперед.
               </p>
-              {/* Show toggle button only on mobile screens */}
               <button
-                className="mt-4 text-[#A22823] font-semibold hover:underline md:hidden"
+                className="mt-4 text-[#A22823] dark:text-[#FF5B56] font-semibold hover:underline md:hidden"
                 onClick={() => setIsOpen(!isOpen)}
               >
                 {isOpen ? "Скрыть" : "Показать больше"}

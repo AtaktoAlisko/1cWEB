@@ -3,8 +3,8 @@
 import React, { useState } from "react";
 import Link from "next/link";
 import Modal from "./Modal";
-import { FaDownload } from "react-icons/fa"; // Import an icon for download
-import Image from "next/image"; // Import Image component for Next.js
+import { FaDownload } from "react-icons/fa";
+import Image from "next/image";
 import ERPCl from "../../public/ERPCl.png";
 
 const SidebarMenu: React.FC = () => {
@@ -30,16 +30,16 @@ const SidebarMenu: React.FC = () => {
   ];
 
   return (
-    <div className="bg-white p-6 rounded-lg shadow-lg mb-8 lg:mb-0 border border-gray-200">
+    <div className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-lg mb-8 lg:mb-0 border border-gray-200 dark:border-gray-700">
       <nav className="space-y-4">
         {menuItems.map((item, index) => (
           <Link
             key={index}
             href={item.link}
-            className="group block rounded-lg bg-gray-50 border border-gray-300 shadow-sm hover:bg-gray-100 transition-colors"
+            className="group block rounded-lg bg-gray-50 dark:bg-gray-700 border border-gray-300 dark:border-gray-600 shadow-sm hover:bg-gray-100 dark:hover:bg-gray-600 transition-colors"
           >
             <div className="p-4">
-              <h5 className="text-lg font-medium text-gray-800 group-hover:text-red-600 transition-colors">
+              <h5 className="text-lg font-medium text-gray-800 dark:text-gray-200 group-hover:text-red-600 dark:group-hover:text-red-400 transition-colors">
                 {item.title}
               </h5>
             </div>
@@ -77,7 +77,7 @@ const SidebarMenu: React.FC = () => {
           </p>
           <button
             onClick={toggleModal}
-            className="bg-white text-red-600 font-semibold py-2 px-4 rounded-lg w-full text-center hover:bg-red-100 transition-colors"
+            className="bg-white text-red-600 font-semibold py-2 px-4 rounded-lg w-full text-center hover:bg-red-100 dark:bg-gray-800 dark:text-red-400 dark:hover:bg-gray-700 transition-colors"
           >
             Связаться с нами
           </button>

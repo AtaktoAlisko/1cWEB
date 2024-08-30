@@ -272,7 +272,7 @@ const ServicesCards: React.FC = () => {
             className="px-2 md:px-4 py-4"
           >
             <div
-              className="slide-content group flex flex-col rounded-lg bg-white border border-[#A22823] transition-all duration-300 transform hover:scale-105"
+              className="slide-content group flex flex-col rounded-lg bg-white dark:bg-gray-800 border border-[#A22823] dark:border-[#FF5B56] transition-all duration-300 transform hover:scale-105"
               style={{ height: `${slideHeight}px`, minHeight: "400px" }}
             >
               <div className="overflow-hidden rounded-t-lg p-4 pb-2 flex-shrink-0">
@@ -290,7 +290,7 @@ const ServicesCards: React.FC = () => {
                   }}
                 />
               </div>
-              <div className="p-4 md:p-6 pt-3 text-gray-800 flex flex-col flex-grow">
+              <div className="p-4 md:p-6 pt-3 text-gray-800 dark:text-gray-200 flex flex-col flex-grow">
                 <h3 className="mb-2 text-lg md:text-xl font-semibold text-center">
                   {service.title}
                 </h3>

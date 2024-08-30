@@ -1,11 +1,11 @@
 "use client";
-import { useEffect, useState } from "react";
+import { useEffect, useState, useRef } from "react";
 import Image from "next/image";
 import firstImg from "../../../public/Carousel/img-1.jpg";
 import secondImg from "../../../public/Carousel/img-2.jpg";
 import thirdImg from "../../../public/Carousel/img-3.jpg";
 import Modal from "../Modal";
-import { motion } from "framer-motion";
+import { motion, useScroll, useTransform } from "framer-motion";
 
 const textAnimation = {
   hidden: {
@@ -21,6 +21,13 @@ const textAnimation = {
 
 const Carousel = () => {
   const [modalIsOpen, setModalIsOpen] = useState(false);
+  const carouselRef = useRef(null);
+  const { scrollYProgress } = useScroll({
+    target: carouselRef,
+    offset: ["start start", "end start"]
+  });
+
+  const y = useTransform(scrollYProgress, [0, 1], ["0%", "20%"]);
 
   useEffect(() => {
     const init = async () => {
@@ -34,6 +41,7 @@ const Carousel = () => {
 
   return (
     <motion.div
+      ref={carouselRef}
       initial="hidden"
       whileInView="visible"
       id="carouselExampleCaptions"
@@ -49,11 +57,14 @@ const Carousel = () => {
           data-twe-carousel-item
           style={{ backfaceVisibility: "hidden" }}
         >
-          <Image
-            src={firstImg}
-            className="block w-full h-[50vh] sm:h-[60vh] md:h-[70vh] lg:h-[80vh] xl:h-[90vh] 2xl:h-[100vh] object-cover"
-            alt="Slide 1"
-          />
+          <motion.div style={{ y }} className="w-full h-full">
+            <Image
+              src={firstImg}
+              className="block w-full h-[50vh] sm:h-[60vh] md:h-[70vh] lg:h-[80vh] xl:h-[90vh] 2xl:h-[100vh] object-cover"
+              alt="Slide 1"
+            />
+          </motion.div>
+          <div className="absolute inset-0 bg-black opacity-50"></div>
           <div className="absolute inset-x-0 top-1/2 transform -translate-y-1/2 text-center text-white">
             <motion.h2
               custom={1}
@@ -91,11 +102,14 @@ const Carousel = () => {
           data-twe-carousel-item
           style={{ backfaceVisibility: "hidden" }}
         >
-          <Image
-            src={secondImg}
-            className="block w-full h-[50vh] sm:h-[60vh] md:h-[70vh] lg:h-[80vh] xl:h-[90vh] 2xl:h-[100vh] object-cover"
-            alt="Slide 2"
-          />
+          <motion.div style={{ y }} className="w-full h-full">
+            <Image
+              src={secondImg}
+              className="block w-full h-[50vh] sm:h-[60vh] md:h-[70vh] lg:h-[80vh] xl:h-[90vh] 2xl:h-[100vh] object-cover"
+              alt="Slide 2"
+            />
+          </motion.div>
+          <div className="absolute inset-0 bg-black opacity-50"></div>
           <div className="absolute inset-x-0 top-1/2 transform -translate-y-1/2 text-center text-white">
             <motion.h2
               variants={textAnimation}
@@ -127,11 +141,14 @@ const Carousel = () => {
           data-twe-carousel-item
           style={{ backfaceVisibility: "hidden" }}
         >
-          <Image
-            src={thirdImg}
-            className="block w-full h-[50vh] sm:h-[60vh] md:h-[70vh] lg:h-[80vh] xl:h-[90vh] 2xl:h-[100vh] object-cover"
-            alt="Slide 3"
-          />
+          <motion.div style={{ y }} className="w-full h-full">
+            <Image
+              src={thirdImg}
+              className="block w-full h-[50vh] sm:h-[60vh] md:h-[70vh] lg:h-[80vh] xl:h-[90vh] 2xl:h-[100vh] object-cover"
+              alt="Slide 3"
+            />
+          </motion.div>
+          <div className="absolute inset-0 bg-black opacity-50"></div>
           <div className="absolute inset-x-0 top-1/2 transform -translate-y-1/2 text-center text-white">
             <motion.h2
               variants={textAnimation}

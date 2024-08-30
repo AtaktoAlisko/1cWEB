@@ -57,7 +57,7 @@ const Reviews: React.FC = () => {
         {reviews.map((review, index) => (
           <div
             key={index}
-            className="bg-white dark:bg-gray-800 shadow-lg rounded-lg p-6 border border-[#A22823] dark:border-[#FF5B56] transition-all duration-300 ease-in-out"
+            className="bg-white dark:bg-gray-800 shadow-lg rounded-lg p-6 border border-[#A22823] dark:border-[#A22823] transition-all duration-300 ease-in-out"
           >
             <div className="flex items-center mb-4">
               <div className="w-32 h-19 bg-gray-300 dark:bg-gray-300 mr-4">

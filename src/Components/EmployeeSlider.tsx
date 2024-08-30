@@ -67,7 +67,7 @@ const EmployeeSlider = () => {
                 height={128}
                 className="w-32 h-32 mx-auto rounded-full mb-4"
               />
-              <h3 className="text-lg font-semibold text-white">{employee.name}</h3>
+              <h3 className="text-lg font-semibold text-black dark:text-white">{employee.name}</h3>
               <p className="text-black dark:text-white">{employee.school}</p>
             </div>
           </div>

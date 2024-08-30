@@ -59,7 +59,7 @@ const EmployeeSlider = () => {
       <Slider {...settings}>
         {employees.map((employee, index) => (
           <div key={index} className="p-4">
-            <div className="bg-gray-800 rounded-lg shadow-lg p-6 text-center">
+            <div className="bg-white dark:bg-gray-800 rounded-lg shadow-lg p-6 text-center">
               <Image
                 src={employee.image}
                 alt={employee.name}
@@ -68,7 +68,7 @@ const EmployeeSlider = () => {
                 className="w-32 h-32 mx-auto rounded-full mb-4"
               />
               <h3 className="text-lg font-semibold text-white">{employee.name}</h3>
-              <p className="text-gray-300">{employee.school}</p>
+              <p className="text-black dark:text-white">{employee.school}</p>
             </div>
           </div>
         ))}

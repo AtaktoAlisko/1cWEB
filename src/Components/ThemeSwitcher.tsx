@@ -1,6 +1,7 @@
+// components/ThemeSwitcher.tsx
 'use client';
 
-import { useState, useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import { useTheme } from 'next-themes';
 
 const ThemeSwitcher = () => {
@@ -15,35 +16,27 @@ const ThemeSwitcher = () => {
     return null;
   }
 
+  const toggleTheme = () => {
+    console.log('Current theme:', theme);
+    setTheme(theme === 'dark' ? 'light' : 'dark');
+  };
+
   return (
-    <div className="w-full flex items-center justify-center">
-      <div className="w-full relative flex items-center">
-        <div className="absolute inset-0 flex">
-          <div className="flex-1 bg-gray-200 dark:bg-gray-700 transition-all duration-300 ease-in-out"></div>
-          <div className="flex-1 bg-gray-600 dark:bg-[#121212] transition-all duration-300 ease-in-out"></div>
-        </div>
-        <button
-          onClick={() => setTheme('light')}
-          className={`flex-1 py-4 z-10 flex items-center justify-center transition-all duration-300 font-semibold ${
-            theme === 'light' 
-              ? 'text-gray-800 bg-white bg-opacity-70' 
-              : 'text-gray-400 hover:bg-gray-100 hover:bg-opacity-10'
-          }`}
-        >
-          Light Mode
-        </button>
-        <button
-          onClick={() => setTheme('dark')}
-          className={`flex-1 py-4 z-10 flex items-center justify-center transition-all duration-300 font-semibold ${
-            theme === 'dark' 
-              ? 'text-white  bg-opacity-70' 
-              : 'text-gray-400 hover:bg-gray-900 hover:bg-opacity-10'
-          }`}
-        >
-          Dark Mode
-        </button>
-      </div>
-    </div>
+    <button
+      onClick={toggleTheme}
+      className="p-2 rounded-full bg-gray-200 dark:bg-gray-800 transition-colors duration-200"
+      aria-label="Toggle theme"
+    >
+      {theme === 'dark' ? (
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" className="w-5 h-5 text-yellow-500">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" />
+        </svg>
+      ) : (
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" className="w-5 h-5 text-gray-900">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />
+        </svg>
+      )}
+    </button>
   );
 };
 

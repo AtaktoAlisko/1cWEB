@@ -85,7 +85,7 @@ export default function Header() {
                 fontVariationSettings: '"slnt" -10',
                 lineHeight: 1,
               }}>
-                Softway Service
+                Softway Services
               </span>
             </a>
           </div>

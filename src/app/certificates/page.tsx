@@ -191,7 +191,7 @@ const CertificatesPage: React.FC = () => {
     <div className="container mx-auto px-4 py-8 font-sans">
       <h1 className="text-4xl font-bold mb-8 text-center text-gray-800">Государственные сертификаты</h1>
       <h2 className="text-2xl font-semibold mb-6 text-center text-gray-600">
-        Государственные сертификаты, полученные программными продуктами фирмы "1С"
+        Государственные сертификаты, полученные программными продуктами фирмы \"1С\"
       </h2>
 
       <div className="mb-8">

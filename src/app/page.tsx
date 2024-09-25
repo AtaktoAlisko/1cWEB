@@ -8,10 +8,9 @@ import ProudNumbersBar from "@/Components/Homepage/ProudNumbersBar";
 import BasicInfo from "../Components/Homepage/BasicInfo";
 import Reviews from "../Components/Homepage/Reviews";
 import Footer from "../Components/Footer";
-import OurBar from '../Components/Homepage/OurBar';
-import ServicesCards from '../Components/Homepage/ServicesCards';
+import OurBar from "../Components/Homepage/OurBar";
+import ServicesCards from "../Components/Homepage/ServicesCards";
 import ServicesCarousel from "./services/page";
-
 
 export default function Home() {
   return (
@@ -21,7 +20,6 @@ export default function Home() {
 
       <DepartmentGrid />
 
-      {/* <ServicesCards /> */}
       <OurBar />
       <ServicesCards />
       <ProudNumbersBar />

@@ -12,22 +12,34 @@ const Footer = () => {
             </h4>
             <ul className="space-y-3">
               <li>
-                <a href="#" className="hover:text-gray-300 transition-colors">
+                <a
+                  href=" /aboutus"
+                  className="hover:text-gray-300 transition-colors"
+                >
                   Наша команда
                 </a>
               </li>
               <li>
-                <a href="#" className="hover:text-gray-300 transition-colors">
+                <a
+                  href=" /aboutus"
+                  className="hover:text-gray-300 transition-colors"
+                >
                   Карьера
                 </a>
               </li>
               <li>
-                <a href="#" className="hover:text-gray-300 transition-colors">
+                <a
+                  href=" /aboutus"
+                  className="hover:text-gray-300 transition-colors"
+                >
                   Пресса
                 </a>
               </li>
               <li>
-                <a href="#" className="hover:text-gray-300 transition-colors">
+                <a
+                  href=" /aboutus"
+                  className="hover:text-gray-300 transition-colors"
+                >
                   Контакты
                 </a>
               </li>
@@ -35,26 +47,38 @@ const Footer = () => {
           </div>
           <div>
             <h4 className="text-2xl font-semibold mb-6 border-b-2 border-gray-400 pb-2">
-              Продукты
+              Сертификаты
             </h4>
             <ul className="space-y-3">
               <li>
-                <a href="#" className="hover:text-gray-300 transition-colors">
-                  Каталог
+                <a
+                  href="/certificates"
+                  className="hover:text-gray-300 transition-colors"
+                >
+                  1C:ПРОФЕССИОНАЛ
                 </a>
               </li>
               <li>
-                <a href="#" className="hover:text-gray-300 transition-colors">
-                  Новые поступления
+                <a
+                  href="/certificates"
+                  className="hover:text-gray-300 transition-colors"
+                >
+                  1C:Специалист
                 </a>
               </li>
               <li>
-                <a href="#" className="hover:text-gray-300 transition-colors">
-                  Популярные товары
+                <a
+                  href="/certificates"
+                  className="hover:text-gray-300 transition-colors"
+                >
+                  1c:Предприятие 8.3
                 </a>
               </li>
               <li>
-                <a href="#" className="hover:text-gray-300 transition-colors">
+                <a
+                  href="/certificates"
+                  className="hover:text-gray-300 transition-colors"
+                >
                   Распродажа
                 </a>
               </li>
@@ -66,22 +90,34 @@ const Footer = () => {
             </h4>
             <ul className="space-y-3">
               <li>
-                <a href="#" className="hover:text-gray-300 transition-colors">
+                <a
+                  href="/services"
+                  className="hover:text-gray-300 transition-colors"
+                >
                   Консультации
                 </a>
               </li>
               <li>
-                <a href="#" className="hover:text-gray-300 transition-colors">
+                <a
+                  href="/services"
+                  className="hover:text-gray-300 transition-colors"
+                >
                   Поддержка
                 </a>
               </li>
               <li>
-                <a href="#" className="hover:text-gray-300 transition-colors">
+                <a
+                  href="/services"
+                  className="hover:text-gray-300 transition-colors"
+                >
                   Доставка
                 </a>
               </li>
               <li>
-                <a href="#" className="hover:text-gray-300 transition-colors">
+                <a
+                  href="/services"
+                  className="hover:text-gray-300 transition-colors"
+                >
                   Гарантия
                 </a>
               </li>
@@ -93,22 +129,34 @@ const Footer = () => {
             </h4>
             <ul className="space-y-3">
               <li>
-                <a href="#" className="hover:text-gray-300 transition-colors">
+                <a
+                  href="/contact"
+                  className="hover:text-gray-300 transition-colors"
+                >
                   Наш адрес
                 </a>
               </li>
               <li>
-                <a href="#" className="hover:text-gray-300 transition-colors">
+                <a
+                  href="/contact"
+                  className="hover:text-gray-300 transition-colors"
+                >
                   Электронная почта
                 </a>
               </li>
               <li>
-                <a href="#" className="hover:text-gray-300 transition-colors">
+                <a
+                  href="/contact"
+                  className="hover:text-gray-300 transition-colors"
+                >
                   Телефон
                 </a>
               </li>
               <li>
-                <a href="#" className="hover:text-gray-300 transition-colors">
+                <a
+                  href="/contact"
+                  className="hover:text-gray-300 transition-colors"
+                >
                   Социальные сети
                 </a>
               </li>

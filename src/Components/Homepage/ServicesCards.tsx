@@ -72,7 +72,7 @@ interface ArrowProps {
 const NextArrow: React.FC<ArrowProps> = ({ onClick }) => (
   <button
     onClick={onClick}
-    className="absolute -right-12 top-1/2 -translate-y-1/2 z-10 p-2 bg-[#A22823] rounded-full hover:bg-red-700 transition-colors duration-300"
+    className="absolute -right-10 top-1/2 -translate-y-1/2 z-10 p-2 bg-[#A22823] rounded-full hover:bg-red-700 transition-colors duration-300"
     aria-label="Next slide"
   >
     <svg
@@ -95,7 +95,7 @@ const NextArrow: React.FC<ArrowProps> = ({ onClick }) => (
 const PrevArrow: React.FC<ArrowProps> = ({ onClick }) => (
   <button
     onClick={onClick}
-    className="absolute -left-12 top-1/2 -translate-y-1/2 z-10 p-2 bg-[#A22823] rounded-full hover:bg-red-700 transition-colors duration-300"
+    className="absolute -left-10 top-1/2 -translate-y-1/2 z-10 p-2 bg-[#A22823] rounded-full hover:bg-red-700 transition-colors duration-300"
     aria-label="Previous slide"
   >
     <svg
@@ -116,7 +116,7 @@ const PrevArrow: React.FC<ArrowProps> = ({ onClick }) => (
 );
 
 interface CustomDotsProps {
-  dots: React.ReactNode[];
+  dots: React.ReactNode;
   currentSlide: number;
   slidesToShow: number;
   slideCount: number;
@@ -137,7 +137,7 @@ const CustomDots: React.FC<CustomDotsProps> = ({
       marginTop: "20px",
     }}
   >
-    {dots.map((_, index) => {
+    {React.Children.map(dots, (_, index) => {
       const isActive = Array.from({ length: slidesToShow }, (_, i) => {
         const slideIndex = (currentSlide + i) % slideCount;
         return (
@@ -214,7 +214,7 @@ const ServicesCards: React.FC = () => {
     prevArrow: <PrevArrow />,
     beforeChange: (_current: number, next: number) => setCurrentSlide(next),
     customPaging: () => <div />,
-    appendDots: (dots: React.ReactNode[]) => (
+    appendDots: (dots: React.ReactNode) => (
       <CustomDots
         dots={dots}
         currentSlide={currentSlide}
@@ -261,50 +261,38 @@ const ServicesCards: React.FC = () => {
   }, [slidesToShow]);
 
   return (
-    <div className="container mx-auto px-4 md:px-8 py-8 md:py-16 relative">
+    <div className="container mx-auto  sm:px-20 px-10 md:px-10 py-8 md:py-16 relative overflow-hidden">
       <Slider ref={sliderRef} {...settings}>
         {services.map((service, index) => (
           <motion.div
             key={index}
-            initial={{ opacity: 0, y: 50 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: index * 0.1 }}
-            className="px-2 md:px-4 py-4"
+            className="p-4 flex items-stretch slide-content"
+            style={{ height: `${slideHeight}px` }}
           >
-            <div
-              className="slide-content group flex flex-col rounded-lg bg-white dark:bg-gray-800 border border-[#A22823] dark:border-[#FF5B56] transition-all duration-300 transform hover:scale-105"
-              style={{ height: `${slideHeight}px`, minHeight: "400px" }}
-            >
-              <div className="overflow-hidden rounded-t-lg p-4 pb-2 flex-shrink-0">
+            <div className="rounded-lg shadow-lg overflow-hidden relative flex-grow flex flex-col items-center">
+              <div className="relative w-full h-80 mb-6">
                 <Image
-                  className="rounded-lg mx-auto transition-transform duration-300 transform group-hover:scale-110"
                   src={service.image}
                   alt={service.alt}
-                  width={300}
-                  height={300}
-                  style={{
-                    width: "100%",
-                    height: "auto",
-                    aspectRatio: "1/1",
-                    objectFit: "cover",
-                  }}
+                  fill
+                  style={{ objectFit: "contain" }}
                 />
               </div>
-              <div className="p-4 md:p-6 pt-3 text-gray-800 dark:text-gray-200 flex flex-col flex-grow">
-                <h3 className="mb-2 text-lg md:text-xl font-semibold text-center">
+              <div className="flex-grow px-6 text-center">
+                <h3 className="text-lg md:text-xl font-bold mb-4">
                   {service.title}
                 </h3>
-                <p className="mb-4 text-sm md:text-base text-center flex-grow">
+                <p className="text-sm md:text-base text-gray-600 mb-6">
                   {service.description}
                 </p>
-                <div className="flex justify-center mt-auto">
-                  <Link
-                    href={service.link}
-                    className="inline-block rounded bg-[#A22823] px-4 md:px-6 py-2 text-xs font-medium uppercase leading-normal text-white transition duration-300 ease-in-out hover:bg-red-700 focus:bg-red-800 focus:outline-none active:bg-red-900"
-                  >
-                    Подробнее
-                  </Link>
-                </div>
+              </div>
+              <div className="py-4">
+                <Link
+                  href={service.link}
+                  className="bg-[#A22823] hover:bg-[#821b19] text-white py-2 px-4 rounded-full"
+                >
+                  Подробнее
+                </Link>
               </div>
             </div>
           </motion.div>

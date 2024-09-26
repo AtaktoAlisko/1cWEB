@@ -9,11 +9,9 @@ const AutomationManagementPage: React.FC = () => {
     <div className="pt-16 lg:pt-24">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12">
         <div className="flex flex-col lg:flex-row lg:gap-8">
-          {/* <aside className="w-full lg:w-1/4 mb-8 lg:mb-0 order-2 lg:order-1"> */}
           <aside className="lg:w-1/4 order-2 lg:order-1">
             <div className="space-y-5">
               <ServicesSidebar />
-              <ServicesAdvBar />
             </div>
           </aside>
           <main className="lg:w-3/4 order-1 lg:order-2">
@@ -215,7 +213,7 @@ const AutomationManagementPage: React.FC = () => {
             </section>
 
             <div className="mt-10 sm:mt-12">
-              {/* Additional content if needed */}
+              <ServicesAdvBar />
             </div>
           </main>
         </div>

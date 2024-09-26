@@ -9,11 +9,7 @@ const ItManagementPage: React.FC = () => {
     <div className="pt-16 lg:pt-24 ">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div className="lg:flex lg:gap-8">
-          <aside className="lg:w-1/4 order-2 lg:order-1">
-            <div className="space-y-5">
-              <ServicesSidebar />
-            </div>
-          </aside>
+          {/* Adjusting the order for mobile */}
           <main className="lg:w-3/4 order-1 lg:order-2">
             <h1 className="text-4xl font-bold text-gray-900 dark:text-white mb-2">
               It-аудит и оптимизация 1C
@@ -118,6 +114,12 @@ const ItManagementPage: React.FC = () => {
             </div>
             <ServicesAdv />
           </main>
+
+          <aside className="lg:w-1/4 order-3 lg:order-1">
+            <div className="space-y-5">
+              <ServicesSidebar />
+            </div>
+          </aside>
         </div>
       </div>
     </div>

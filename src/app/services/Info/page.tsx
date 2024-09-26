@@ -1,15 +1,14 @@
 import React from "react";
-import Image from "next/image";
-import Link from "next/link";
 import ServicesSidebar from "@/Components/ServicesSidebar";
 import ServicesAdv from "@/Components/ServicesAdv";
 
 const InfoManagementPage: React.FC = () => {
   return (
-    <div className="pt-16 lg:pt-24 ">
+    <div className="pt-16 lg:pt-24">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div className="lg:flex lg:gap-8">
-          <aside className="lg:w-1/4 order-2 lg:order-1">
+          {/* Sidebar for large screens */}
+          <aside className="lg:w-1/4 order-2 lg:order-1 hidden lg:block">
             <div className="space-y-5">
               <ServicesSidebar />
             </div>
@@ -69,6 +68,11 @@ const InfoManagementPage: React.FC = () => {
 
             <ServicesAdv />
           </main>
+        </div>
+
+        {/* Sidebar for small and medium screens */}
+        <div className="mt-10 sm:mt-12 block lg:hidden">
+          <ServicesSidebar />
         </div>
       </div>
     </div>

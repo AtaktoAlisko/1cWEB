@@ -87,23 +87,11 @@ export default function Header() {
 
   return (
     <>
-      <header className="fixed top-0 left-0 w-full text-white shadow-md font-sans tracking-wide z-50">
-        <div className="flex items-center justify-between px-4 py-2 bg-white dark:bg-[#121212] min-h-[70px]">
+      <header className="fixed top-0 left-0 w-full text-white shadow-md font-sans tracking-wide z-50 ">
+        <div className="flex items-center justify-between py-2 bg-white dark:bg-[#121212] min-h-[70px] px-4 sm:px-5 md:px-12 lg:px-24">
           <div className="flex items-center flex-shrink-0 ">
-            <a href="/" className="flex items-center">
-              <Image src="/logoNew.png" alt="logo" width={36} height={36} />
-              <span
-                className="ml-1 text-lg sm:text-xl md:text-2xl lg:text-3xl text-black dark:text-white mb-[-5px] truncate max-w-[150px] sm:max-w-[200px] md:max-w-full"
-                style={{
-                  fontFamily: "Arial, sans-serif",
-                  fontWeight: "bold",
-                  fontStyle: "italic",
-                  fontVariationSettings: '"slnt" -10',
-                  lineHeight: 1,
-                }}
-              >
-                Softway
-              </span>
+            <a href="/" className="flex items-center ">
+              <Image src="/logo.png" alt="logo" width={150} height={150} />
             </a>
           </div>
 

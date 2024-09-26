@@ -37,7 +37,7 @@ const reviews: Review[] = [
     date: "31 марта 2020",
     text: "Диплом победителя в конкурсе “1С:Проект года” компании “Аграрная кредитная корпорация” и партнерской фирмы “1С” “Softway Service” в номинации “Лучший региональный проект”: Азия “Внедрение “1С:Бухгалтерия 8 для Казахстана” в организации, занимающейся кредитованием”.",
     link: "#",
-    image: "/Clients/3isanur.png",
+    image: "/Clients/green.svg",
   },
 ];
 
@@ -71,7 +71,9 @@ const Reviews: React.FC = () => {
                 <h4 className="font-bold text-lg text-gray-900 dark:text-gray-100">
                   {review.name}
                 </h4>
-                <p className="text-gray-500 dark:text-gray-400 text-sm">{review.date}</p>
+                <p className="text-gray-500 dark:text-gray-400 text-sm">
+                  {review.date}
+                </p>
               </div>
             </div>
             <p

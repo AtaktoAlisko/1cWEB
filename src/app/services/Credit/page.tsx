@@ -8,10 +8,12 @@ const CreditManagementPage: React.FC = () => {
     <div className="pt-16 lg:pt-24">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div className="lg:flex lg:gap-8">
-          <aside className="lg:w-1/4">
-            <ServicesSidebar />
+        <aside className="lg:w-1/4 order-2 lg:order-1">
+            <div className="space-y-5">
+              <ServicesSidebar />
+            </div>
           </aside>
-          <main className="lg:w-3/4">
+          <main className="lg:w-3/4 order-1 lg:order-2">
             <h1 className="text-4xl font-bold text-gray-900 mb-2">
               1С:ERP Управление предприятием
             </h1>

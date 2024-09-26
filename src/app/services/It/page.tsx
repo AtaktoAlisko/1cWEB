@@ -9,10 +9,12 @@ const ItManagementPage: React.FC = () => {
     <div className="pt-16 lg:pt-24 ">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div className="lg:flex lg:gap-8">
-          <aside className="lg:w-1/4">
-            <ServicesSidebar />
+          <aside className="lg:w-1/4 order-2 lg:order-1">
+            <div className="space-y-5">
+              <ServicesSidebar />
+            </div>
           </aside>
-          <main className="lg:w-3/4">
+          <main className="lg:w-3/4 order-1 lg:order-2">
             <h1 className="text-4xl font-bold text-gray-900 dark:text-white mb-2">
               It-аудит и оптимизация 1C
             </h1>
@@ -42,7 +44,9 @@ const ItManagementPage: React.FC = () => {
                 ].map((item, index) => (
                   <div key={index} className="flex flex-col items-center">
                     <div className="text-4xl mb-2">{item.icon}</div>
-                    <p className="text-center dark:text-gray-300">{item.name}</p>
+                    <p className="text-center dark:text-gray-300">
+                      {item.name}
+                    </p>
                   </div>
                 ))}
               </div>

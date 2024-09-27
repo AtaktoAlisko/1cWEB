@@ -21,10 +21,10 @@ const Modal: React.FC<ModalProps> = ({ isOpen, toggleModal }) => {
 
     emailjs
       .sendForm(
-        "service_59aatqd",
-        "template_8veh5qb",
+        "service_3j9n7hn",
+        "template_k4l3bb9",
         form.current,
-        "TqxDoU2R-z9cyI7oi"
+        "I3UUBke8VZ31qQhpw"
       )
       .then(
         () => {

@@ -64,10 +64,11 @@ const ThemeSwitcher = () => {
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [showLanguageMenu, setShowLanguageMenu] = useState(false);
 
   useEffect(() => {
     const script = document.createElement("script");
-    script.src = "//code.jivo.ru/widget/qssjfqh8bY";
+    script.src = "//code.jivo.ru/widget/FcghFAcXjr";
     script.async = true;
     document.body.appendChild(script);
 
@@ -156,8 +157,46 @@ export default function Header() {
             </ul>
           </nav>
 
-          <div className="flex items-center">
+          <div className="flex items-center text-">
             <ThemeSwitcher />
+
+            <button
+              className="ml-4"
+              onClick={() => setShowLanguageMenu(!showLanguageMenu)}
+            >
+              Языки
+            </button>
+
+            {showLanguageMenu && (
+              <div className="absolute right-0 mt-2 bg-white dark:bg-gray-800 shadow-lg rounded-md">
+                <ul className="py-2">
+                  <li>
+                    <a
+                      href="#"
+                      className="block px-4 py-2 text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-700"
+                    >
+                      KZ
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      href="#"
+                      className="block px-4 py-2 text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-700"
+                    >
+                      RU
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      href="#"
+                      className="block px-4 py-2 text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-700"
+                    >
+                      EN
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            )}
 
             <button
               id="toggleOpen"
@@ -231,7 +270,6 @@ export default function Header() {
                   Контакты
                 </a>
               </li>
-
               <li>
                 <a
                   href="https://umfo.erpcloud.kz/ru/home"
@@ -244,13 +282,6 @@ export default function Header() {
           </div>
         )}
       </header>
-
-      {isMenuOpen && (
-        <div
-          className="fixed top-0 left-0 w-full h-full bg-black bg-opacity-50 backdrop-blur-sm z-40"
-          onClick={() => setIsMenuOpen(false)}
-        ></div>
-      )}
     </>
   );
 }

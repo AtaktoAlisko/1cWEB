@@ -35,176 +35,233 @@ const CertificateCard: React.FC<Certificate> = ({
 const CertificatesPage: React.FC = () => {
   const sections: CertificateSection[] = [
     {
-      title: "1С:ПРОФЕССИОНАЛ",
+      title: "Деменев Асхат Жанатович",
       certificates: [
         {
-          href: "../../../public/1cProf/prof1.png",
-          imgSrc: "../../../public/1cProf/prof1.png",
-          alt: "Увеличить",
-          description:
-            "1С:ПРОФЕССИОНАЛ Удостоверяет, что Якимов Максим Иванович успешно сдал сертификационный экзаменпо технологическим вопросам",
-        },
-        {
-          href: "https://static.1c.ru/rus/products/serts/sert4183.pdf",
-          imgSrc: "https://static.1c.ru/rus/products/serts/sert4183-thumb.png",
-          alt: "Увеличить",
-          description:
-            "Сертификат соотвествия ФСТЭК России № 4183 (от 04.12.2019, действителен до 04.12.2024)",
-        },
-        {
-          href: "https://static.1c.ru/rus/products/serts/sert83.jpg",
-          imgSrc: "https://static.1c.ru/rus/products/serts/sert83-thumb.jpg",
-          alt: "Увеличить",
-          description:
-            "Сертификат соответствия ФСТЭК России № 3442 (от 2 сентября 2015 г., действителен до 2 сентября 2023 г.)",
-        },
-        {
-          href: "https://static.1c.ru/rus/products/serts/sert15988.pdf",
-          imgSrc: "https://static.1c.ru/rus/products/serts/sert15988-thumb.png",
-          alt: "Увеличить",
-          description:
-            "Сертификат соответствия СМК № ВР 08.1.15988-2022 (от 04.04.2022, действителен до 04.04.2025)",
-        },
-        {
-          href: "https://static.1c.ru/rus/products/serts/81-a.jpg",
-          imgSrc: "https://static.1c.ru/rus/products/serts/81-a-thumb.jpg",
-          alt: "Увеличить",
-          description:
-            "Сертификат соответствия на 1С:Предприятие 8 от 14.10.2009",
-        },
-        {
-          href: "https://static.1c.ru/rus/products/serts/81-b.jpg",
-          imgSrc: "https://static.1c.ru/rus/products/serts/81-b-thumb.jpg",
-          alt: "Увеличить",
-          description: "Приложение к сертификату соответствия от 06.06.2008",
-        },
-        {
-          href: "https://static.1c.ru/rus/products/serts/sert2137.jpg",
-          imgSrc: "https://static.1c.ru/rus/products/serts/sert2137_thumb.gif",
-          alt: "Увеличить",
-          description:
-            "Сертификат соответствия ФСТЭК России по требованиям безопасности информации",
-        },
-        {
-          href: "https://static.1c.ru/rus/products/serts/sert_2137_20072013.jpg",
-          imgSrc:
-            "https://static.1c.ru/rus/products/serts/sert_2137_20072013_thumb.gif",
-          alt: "Увеличить",
-          description:
-            "Сертификат соответствия ФСТЭК России № 2137 (продление от 20.07.2013 г.)",
-        },
-      ],
-    },
-    {
-      title: "1С:СПЕЦИАЛИСТ",
-      certificates: [
-        {
-          href: "https://static.1c.ru/rus/products/serts/sert-p1.jpg",
-          imgSrc: "https://static.1c.ru/rus/products/serts/sert-p1_137h.jpg",
-          alt: "Открыть большое изображение",
-          description:
-            'Сертификат соответствия на "1С:Предприятие 7.7 (сетевая версия) Бухгалтерский учет" от 17.12.2004',
-        },
-        {
-          href: "https://static.1c.ru/rus/products/serts/sert-p2.jpg",
-          imgSrc: "https://static.1c.ru/rus/products/serts/sert-p2_137h.jpg",
-          alt: "Открыть большое изображение",
-          description: "Приложение к сертификату соответствия от 17.12.2004",
-        },
-        {
-          href: "https://static.1c.ru/rus/products/serts/sert-p3.jpg",
-          imgSrc: "https://static.1c.ru/rus/products/serts/sert-p3_137h.jpg",
-          alt: "Открыть большое изображение",
-          description:
-            'Разрешение на применение знака соответствия ГОСТ Р к продукту "1С:Предприятие 7.7 (сетевая версия) Бухгалтерский учет"',
-        },
-        {
-          href: "https://static.1c.ru/rus/products/serts/serpre77.jpg",
-          imgSrc: "https://static.1c.ru/rus/products/serts/serpre77s.jpg",
-          alt: "Открыть большое изображение",
-          description: "Сертификат соответствия от 23.12.99",
-        },
-        {
-          href: "https://static.1c.ru/rus/products/serts/pril1.jpg",
-          imgSrc: "https://static.1c.ru/rus/products/serts/pril1s.jpg",
-          alt: "Открыть большое изображение",
-          description: "Приложение к сертификату от 23.12.99. Страница 1.",
-        },
-        {
-          href: "https://static.1c.ru/rus/products/serts/pril2.jpg",
-          imgSrc: "https://static.1c.ru/rus/products/serts/pril2s.jpg",
-          alt: "Открыть большое изображение",
-          description: "Приложение к сертификату от 23.12.99. Страница 2.",
-        },
-      ],
-    },
-    {
-      title: "1С:Предприятие 8.3",
-      certificates: [
-        {
-          href: "https://static.1c.ru/rus/products/serts/snal220101.jpg",
-          imgSrc: "https://static.1c.ru/rus/products/serts/snal220101s.jpg",
-          alt: "Открыть большое изображение",
-          description:
-            'Сертификат соответствия на "1С:Налогоплательщик 7.7" от 22.01.2001',
-        },
-        {
-          href: "https://static.1c.ru/rus/products/serts/sernal77.jpg",
-          imgSrc: "https://static.1c.ru/rus/products/serts/sernal77s.jpg",
-          alt: "Открыть большое изображение",
-          description:
-            'Сертификат соответствия на "1С:Налогоплательщик 7.7" от 23.12.1999',
-        },
-        {
-          href: "https://static.1c.ru/rus/products/serts/svidnp98.jpg",
-          imgSrc: "https://static.1c.ru/rus/products/serts/svidnp98s.jpg",
-          alt: "Открыть большое изображение",
-          description:
-            'Свидетельство N7 от 18.05.1998 на "1С:Налогоплательщик"',
-        },
-        {
-          href: "https://static.1c.ru/rus/products/serts/svidnp97.jpg",
-          imgSrc: "https://static.1c.ru/rus/products/serts/svidnp97s.jpg",
-          alt: "Открыть большое изображение",
-          description: 'Свидетельство N1 от 5.01.1998 на "1С:Налогоплательщик"',
-        },
-      ],
-    },
-    {
-      title: "1С:Предприятие 7.7 для образования",
-      certificates: [
-        {
-          href: "https://static.1c.ru/rus/products/serts/school1.jpg",
-          imgSrc: "https://static.1c.ru/rus/products/serts/school1.jpg",
-          alt: "Открыть большое изображение",
-          description:
-            'Сертификат соответствия на "1С:ХроноГраф Школа" от 24.08.2004 (ГОСТ Р)',
-        },
-        {
-          href: "https://static.1c.ru/rus/products/serts/school2.jpg",
-          imgSrc: "https://static.1c.ru/rus/products/serts/school2.jpg",
-          alt: "Открыть большое изображение",
-          description:
-            'Сертификат соответствия на "1С:ХроноГраф Школа" от 21.06.2005 ("ИНКОМТЕХСЕРТ")',
-        },
-      ],
-    },
-    {
-      title: "1С:Образование 3.0",
-      certificates: [
-        {
-          href: "https://static.1c.ru/rus/products/serts/GOST_R_E3.jpg",
+          href: "/1c8.3/d1.pdf",  // Ссылка на большое изображение
           imgSrc: "https://static.1c.ru/rus/products/serts/GOST_R_E3s.jpg",
           alt: "Открыть большое изображение",
           description:
-            'Сертификат соответствия на "1С:Образование 3.0" от 14.06.2005 (ГОСТ Р)',
+            'Сертификат о курсе "Основы клиент-серверного программирования в 1С:Предприятие 8.3" (16 часов)',
         },
         {
-          href: "https://static.1c.ru/rus/products/serts/incomteh_E3.jpg",
-          imgSrc: "https://static.1c.ru/rus/products/serts/incomteh_E3s.jpg",
+          href: "/1c8.3/d2.pdf",  // Ссылка на большое изображение
+          imgSrc: "https://static.1c.ru/rus/products/serts/GOST_R_E3s.jpg",
           alt: "Открыть большое изображение",
           description:
-            'Сертификат соответствия на "1С:Образование 3.0" от 14.06.2005 ("ИНКОМТЕХСЕРТ")',
+            'Сертификат по курсу "Механизм системы компоновки данных" (40 часов)',
+        },
+        {
+          href: "/1cProf/prof1.pdf",  // Ссылка на большое изображение
+          imgSrc: "https://static.1c.ru/rus/products/serts/GOST_R_E3s.jpg",
+          alt: "Открыть большое изображение",
+          description:
+            'Сертификат "1С:Профессионал" на знание механизмов платформы 1С:Предприятие 8.1',
+        },
+        {
+          href: "/1cProf/prof2.pdf",  // Ссылка на большое изображение
+          imgSrc: "https://static.1c.ru/rus/products/serts/GOST_R_E3s.jpg",
+          alt: "Открыть большое изображение",
+          description:
+            'Сертификат "1С:Профессионал" на знание особенностей и применение программы 1С:Бухгалтерия 8 для Казахстана',
+        },
+        {
+          href: "/1cProf/prof3.pdf",  // Ссылка на большое изображение
+          imgSrc: "https://static.1c.ru/rus/products/serts/GOST_R_E3s.jpg",
+          alt: "Открыть большое изображение",
+          description:
+            'Сертификат "1С:Профессионал" по программе 1С:Зарплата и управление персоналом 8 для Казахстана',
+        },
+        {
+          href: "/1cSpec/spec1.pdf",  // Ссылка на большое изображение
+          imgSrc: "https://static.1c.ru/rus/products/serts/GOST_R_E3s.jpg",
+          alt: "Открыть большое изображение",
+          description:
+            'Сертификат "1С:Специалист-консультант" по внедрению 1С:Зарплата и управление персоналом 8',
+        },
+        {
+          href: "/1cSpec/spec2.pdf",  // Ссылка на большое изображение
+          imgSrc: "https://static.1c.ru/rus/products/serts/GOST_R_E3s.jpg",
+          alt: "Открыть большое изображение",
+          description:
+            'Сертификат "1С:Специалист" по конфигурированию и внедрению бухгалтерской подсистемы (1С:Предприятие 8)',
+        },
+        {
+          href: "/1cSpec/spec3.pdf",  // Ссылка на большое изображение
+          imgSrc: "https://static.1c.ru/rus/products/serts/GOST_R_E3s.jpg",
+          alt: "Открыть большое изображение",
+          description:
+            'Сертификат "1С:Специалист" по разработке и модификации прикладных решений на платформе 1С:Предприятие 8',
+        },
+        {
+          href: "/1cSpec/spec4.pdf",  // Ссылка на большое изображение
+          imgSrc: "https://static.1c.ru/rus/products/serts/GOST_R_E3s.jpg",
+          alt: "Открыть большое изображение",
+          description:
+            'Сертификат "1С:Специалист-консультант" по внедрению 1С:Бухгалтерия 8',
+        },
+        {
+          href: "/management/m1.pdf",  // Ссылка на большое изображение
+          imgSrc: "https://static.1c.ru/rus/products/serts/GOST_R_E3s.jpg",
+          alt: "Открыть большое изображение",
+          description:
+            'Сертификат "1С:Руководитель проектов" по автоматизации управления и учета на базе 1С:Предприятие',
+        },
+        {
+          href: "/management/m2.pdf",  // Ссылка на большое изображение
+          imgSrc: "https://static.1c.ru/rus/products/serts/GOST_R_E3s.jpg",
+          alt: "Открыть большое изображение",
+          description:
+            'Сертификат "1С:Управление проектами"',
+        },
+        {
+          href: "/management/m3.pdf",  // Ссылка на большое изображение
+          imgSrc: "https://static.1c.ru/rus/products/serts/GOST_R_E3s.jpg",
+          alt: "Открыть большое изображение",
+          description:
+            'Сертификат "Основы менеджмента"',
+        },
+      ],
+    },
+    {
+      title: "Сафиулин Рустам Тагирович",
+      certificates: [
+        {
+          href: "/1cProf/prof8.pdf",  // Ссылка на большое изображение
+          imgSrc: "https://static.1c.ru/rus/products/serts/GOST_R_E3s.jpg",
+          alt: "Открыть большое изображение",
+          description:
+            'Сертификат "1С:Профессионал" по программе 1С:Бухгалтерия 8',
+        },
+        {
+          href: "/1cProf/prof10.pdf",  // Ссылка на большое изображение
+          imgSrc: "https://static.1c.ru/rus/products/serts/GOST_R_E3s.jpg",
+          alt: "Открыть большое изображение",
+          description:
+            'Сертификат "1С:Профессионал" по программе 1С:Торговля и Склад 7.7',
+        },
+        {
+          href: "/1cProf/prof12.pdf",  // Ссылка на большое изображение
+          imgSrc: "https://static.1c.ru/rus/products/serts/GOST_R_E3s.jpg",
+          alt: "Открыть большое изображение",
+          description:
+            'Сертификат "1С:Профессионал" по программе Управление торговлей для Казахстана (1С:Предприятие 8)',
+        },
+        {
+          href: "/1cProf/prof14.pdf",  // Ссылка на большое изображение
+          imgSrc: "https://static.1c.ru/rus/products/serts/GOST_R_E3s.jpg",
+          alt: "Открыть большое изображение",
+          description:
+            'Сертификат "1С:Профессионал" по программе Управление холдингом 8 (ред. 3.0)',
+        },
+      ],
+    },
+    {
+      title: "Сафиулина Елизавета Викторовна",
+      certificates: [
+        {
+          href: "/1cProf/prof15.pdf",  // Ссылка на большое изображение
+          imgSrc: "https://static.1c.ru/rus/products/serts/GOST_R_E3s.jpg",
+          alt: "Открыть большое изображение",
+          description:
+            'Сертификат "1С:Профессионал" по программе 1С:Бухгалтерия 8 для Казахстана',
+        },
+      ],
+    },
+    {
+      title: "Давлетбаева Зарина Маратбековна",
+      certificates: [
+        {
+          href: "/1cProf/prof4.pdf",  // Ссылка на большое изображение
+          imgSrc: "https://static.1c.ru/rus/products/serts/GOST_R_E3s.jpg",
+          alt: "Открыть большое изображение",
+          description:
+            'Сертификат "1С:Профессионал" по программе 1С:Бухгалтерия 8 для Казахстана',
+        },
+      ],
+    },
+    {
+      title: "Старцева Екатерина Сергеевна",
+      certificates: [
+        {
+          href: "/1cProf/prof16.pdf",  // Ссылка на большое изображение
+          imgSrc: "https://static.1c.ru/rus/products/serts/GOST_R_E3s.jpg",
+          alt: "Открыть большое изображение",
+          description:
+            'Сертификат "1С:Профессионал" по программе 1С:ERP Управление предприятием 2',
+        },
+        {
+          href: "/1cProf/prof17.pdf",  // Ссылка на большое изображение
+          imgSrc: "https://static.1c.ru/rus/products/serts/GOST_R_E3s.jpg",
+          alt: "Открыть большое изображение",
+          description:
+            'Сертификат "1С:Профессионал" по программе 1С:Бухгалтерия 8 для Казахстана',
+        },
+      ],
+    },
+    {
+      title: "Жанисбаева Айгуль Серикпаевна",
+      certificates: [
+        {
+          href: "/1cProf/prof5.pdf",  // Ссылка на большое изображение
+          imgSrc: "https://static.1c.ru/rus/products/serts/GOST_R_E3s.jpg",
+          alt: "Открыть большое изображение",
+          description:
+            'Сертификат "1С:Профессионал" по сопровождению пользователей и внедрению 1С:ИТС',
+        },
+        {
+          href: "/1cProf/prof6.pdf",  // Ссылка на большое изображение
+          imgSrc: "https://static.1c.ru/rus/products/serts/GOST_R_E3s.jpg",
+          alt: "Открыть большое изображение",
+          description:
+            'Сертификат "1С:Профессионал" по программе 1С:Бухгалтерия 8 для Казахстана',
+        },
+        {
+          href: "/1cProf/prof7.pdf",  // Ссылка на большое изображение
+          imgSrc: "https://static.1c.ru/rus/products/serts/GOST_R_E3s.jpg",
+          alt: "Открыть большое изображение",
+          description:
+            'Сертификат "1С:Профессионал" по программе 1С:Зарплата и управление персоналом 8 для Казахстана (ред. 3.1)',
+        },
+      ],
+    },
+    {
+      title: "Якимов Максим Иванович",
+      certificates: [
+        {
+          href: "/1cProf/prof9.pdf",  // Ссылка на большое изображение
+          imgSrc: "https://static.1c.ru/rus/products/serts/GOST_R_E3s.jpg",
+          alt: "Открыть большое изображение",
+          description:
+            'Сертификат "1С:Профессионал" по технологическим вопросам',
+        },
+        {
+          href: "/1cProf/prof11.pdf",  // Ссылка на большое изображение
+          imgSrc: "https://static.1c.ru/rus/products/serts/GOST_R_E3s.jpg",
+          alt: "Открыть большое изображение",
+          description:
+            'Сертификат "1С:Профессионал" по знанию механизмов платформы 1С:Предприятие 8.1',
+        },
+        {
+          href: "/1cProf/prof13.pdf",  // Ссылка на большое изображение
+          imgSrc: "https://static.1c.ru/rus/products/serts/GOST_R_E3s.jpg",
+          alt: "Открыть большое изображение",
+          description:
+            'Сертификат "1С:Профессионал" по программе Управление торговлей для Казахстана (1С:Предприятие 8)',
+        },
+        {
+          href: "/1cSpec/spec5.pdf",  // Ссылка на большое изображение
+          imgSrc: "https://static.1c.ru/rus/products/serts/GOST_R_E3s.jpg",
+          alt: "Открыть большое изображение",
+          description:
+            'Сертификат "1С:Специалист" по разработке и модификации прикладных решений на платформе 1С:Предприятие 8',
+        },
+        {
+          href: "/management/m4.pdf",  // Ссылка на большое изображение
+          imgSrc: "https://static.1c.ru/rus/products/serts/GOST_R_E3s.jpg",
+          alt: "Открыть большое изображение",
+          description:
+            'Сертификат "1С:Эксперт" по технологическим вопросам',
         },
       ],
     },

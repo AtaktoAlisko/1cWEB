@@ -1,6 +1,6 @@
 "use client";
 import Image from "next/image";
-import { useState, useEffect } from 'react';
+import { useState, useEffect } from "react";
 
 interface Project {
   title: string;
@@ -39,15 +39,15 @@ const projects: Project[] = [
     logo: "/logo/logo5.png",
   },
   {
-    title: "AIFC",
-    description: "Внедрение системы Управления холдингом.",
+    title: "МФЦА",
+    description: `Международный финансовый центр ${"Астана"}.`,
     logo: "/logo/logo6.png",
   },
   {
-    title: "AIFC",
+    title: "KPMG",
     description:
       "Внедрение системы Управления холдингом.Совместный проект с KPMG.",
-    logo: "/logo/logo6.png",
+    logo: "/logo/logo11.png",
   },
   {
     title: "KPE",
@@ -69,6 +69,12 @@ const projects: Project[] = [
     description: "Проект для компании ЗаманБанк.",
     logo: "/logo/logo10.png",
   },
+  {
+    title: "Астана-финанс",
+    description:
+      "Разработка и внедрение программного комплекса для управления кредитной компанией",
+    logo: "/logo/logo12.png",
+  },
 ];
 
 function ProjectCard({ title, description, logo }: Project) {
@@ -86,7 +92,9 @@ function ProjectCard({ title, description, logo }: Project) {
       <h3 className="text-xl font-bold text-center text-[#D23D38] mb-4">
         {title}
       </h3>
-      <p className="text-center text-gray-600 dark:text-gray-300">{description}</p>
+      <p className="text-center text-gray-600 dark:text-gray-300">
+        {description}
+      </p>
     </div>
   );
 }

@@ -88,11 +88,23 @@ export default function Header() {
 
   return (
     <>
-      <header className="fixed top-0 left-0 w-full text-white shadow-md font-sans tracking-wide z-50 ">
-        <div className="flex items-center justify-between py-2 bg-white dark:bg-[#121212] min-h-[70px] px-4 sm:px-5 md:px-12 lg:px-24">
-          <div className="flex items-center flex-shrink-0 ">
-            <a href="/" className="flex items-center ">
-              <Image src="/logo.png" alt="logo" width={150} height={150} />
+      <header className="fixed top-0 left-0 w-full text-white shadow-md font-sans tracking-wide z-50">
+        <div className="flex items-center justify-between px-4 py-2 bg-white dark:bg-[#121212] min-h-[70px]">
+          <div className="flex items-center flex-shrink-0">
+            <a href="/" className="flex items-center">
+              <Image src="/logoNew.png" alt="logo" width={36} height={36} />
+              <span
+                className="ml-1 text-lg sm:text-xl md:text-2xl lg:text-3xl text-black dark:text-white mb-[-5px] truncate max-w-[150px] sm:max-w-[200px] md:max-w-full"
+                style={{
+                  fontFamily: "Arial, sans-serif",
+                  fontWeight: "bold",
+                  fontStyle: "italic",
+                  fontVariationSettings: '"slnt" -10',
+                  lineHeight: 1,
+                }}
+              >
+                Softway Services
+              </span>
             </a>
           </div>
 
@@ -159,44 +171,6 @@ export default function Header() {
 
           <div className="flex items-center text-">
             <ThemeSwitcher />
-
-            <button
-              className="ml-4"
-              onClick={() => setShowLanguageMenu(!showLanguageMenu)}
-            >
-              Языки
-            </button>
-
-            {showLanguageMenu && (
-              <div className="absolute right-0 mt-2 bg-white dark:bg-gray-800 shadow-lg rounded-md">
-                <ul className="py-2">
-                  <li>
-                    <a
-                      href="#"
-                      className="block px-4 py-2 text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-700"
-                    >
-                      KZ
-                    </a>
-                  </li>
-                  <li>
-                    <a
-                      href="#"
-                      className="block px-4 py-2 text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-700"
-                    >
-                      RU
-                    </a>
-                  </li>
-                  <li>
-                    <a
-                      href="#"
-                      className="block px-4 py-2 text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-700"
-                    >
-                      EN
-                    </a>
-                  </li>
-                </ul>
-              </div>
-            )}
 
             <button
               id="toggleOpen"

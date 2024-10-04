@@ -28,8 +28,12 @@ const ContactUs = () => {
                 <FaClock className="text-[#A22823] text-2xl mr-3" />
                 Часы работы
               </h2>
-              <p className="text-gray-600 dark:text-gray-400">Пн-Пт: 09:00 - 21:00</p>
-              <p className="text-gray-600 dark:text-gray-400">Сб-Вс: выходной</p>
+              <p className="text-gray-600 dark:text-gray-400">
+                Пн-Пт: 09:00 - 18:00
+              </p>
+              <p className="text-gray-600 dark:text-gray-400">
+                Сб-Вс: выходной
+              </p>
             </div>
             <div className="space-y-2">
               <h2 className="text-xl font-semibold text-gray-700 dark:text-gray-300 flex items-center">
@@ -49,7 +53,9 @@ const ContactUs = () => {
                 <FaMapMarkerAlt className="text-[#A22823] text-2xl mr-3" />
                 Адрес
               </h2>
-              <p className="text-gray-600 dark:text-gray-400">Есильский район, Нура</p>
+              <p className="text-gray-600 dark:text-gray-400">
+                Есильский район
+              </p>
             </div>
             <div className="space-y-2">
               <h2 className="text-xl font-semibold text-gray-700 dark:text-gray-300 flex items-center">

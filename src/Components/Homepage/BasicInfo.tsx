@@ -26,8 +26,8 @@ export default function BasicInfo() {
           <div className="w-full md:w-1/2 flex flex-col justify-center">
             <div className="bg-white dark:bg-gray-800 p-6 md:p-8 rounded-lg shadow-lg border border-[#A22823]">
               <p className="mb-4 text-base md:text-lg leading-relaxed text-gray-700 dark:text-gray-300">
-                Компания «Softway Service» работает на рынке биржевого консалтинга и
-                информационных технологий в Казахстане.
+                Компания «Softway Service» работает на рынке биржевого
+                консалтинга и информационных технологий в Казахстане.
               </p>
               <p className="mb-4 text-base md:text-lg leading-relaxed text-gray-700 dark:text-gray-300">
                 Мы реализуем комплексные проекты, направленные на повышение
@@ -39,8 +39,8 @@ export default function BasicInfo() {
                   isOpen ? "block" : "hidden"
                 } md:block`}
               >
-                Компания «Softway Service» видит свою миссию в том, чтобы с помощью
-                современных информационных и управленческих технологий
+                Компания «Softway Service» видит свою миссию в том, чтобы с
+                помощью современных информационных и управленческих технологий
                 обеспечить казахстанским, международным и государственным
                 организациям качественно новый уровень эффективности
                 (управления).

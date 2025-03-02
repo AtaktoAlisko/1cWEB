@@ -1,7 +1,7 @@
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
-import ServicesSidebar from "@/Components/ServicesSidebar";
+import CServicesSidebar from "@/Components/CServicesSidebar";
 import ServicesAdv from "@/Components/ServicesAdv";
 
 const ERPMPage: React.FC = () => {
@@ -11,7 +11,7 @@ const ERPMPage: React.FC = () => {
         <div className="flex flex-col lg:flex-row lg:gap-8">
           <aside className="lg:w-1/4 order-2 lg:order-1">
             <div className="space-y-5">
-              <ServicesSidebar />
+              <CServicesSidebar />
             </div>
           </aside>
           <main className="lg:w-3/4 order-1 lg:order-2">

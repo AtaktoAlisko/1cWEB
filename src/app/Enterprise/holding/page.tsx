@@ -1,6 +1,7 @@
 import React from "react";
-import ServicesAdv from "@/Components/ServicesAdv";
 import ServicesSidebar from "@/Components/ServicesSidebar";
+import ServicesAdv from "@/Components/ServicesAdv";
+import CServicesSidebar from "@/Components/CServicesSidebar";
 
 const AcoutingPage: React.FC = () => {
   return (
@@ -10,7 +11,7 @@ const AcoutingPage: React.FC = () => {
           {/* Sidebar for large screens */}
           <aside className="lg:w-1/4 order-2 lg:order-1 hidden lg:block">
             <div className="space-y-5">
-              <ServicesSidebar />
+              <CServicesSidebar />
             </div>
           </aside>
           <main className="lg:w-3/4 order-1 lg:order-2">

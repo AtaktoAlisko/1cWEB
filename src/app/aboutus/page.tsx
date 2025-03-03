@@ -48,17 +48,6 @@ export default async function Aboutus() {
             ))}
           </section>
 
-          <div className="flex justify-center mb-12">
-            <a
-              href="https://1c.ru/rus/partners/guideline.jsp"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="bg-[#D23D38] text-white px-6 py-3 rounded-lg text-lg font-semibold transition hover:bg-[#b82f2c]"
-            >
-              Узнать больше о 1С:Франчайзинг
-            </a>
-          </div>
-
           <Reviews />
           <Request />
         </div>

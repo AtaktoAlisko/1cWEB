@@ -33,12 +33,7 @@ const ERPMPage: React.FC = () => {
               численности.
             </p>
 
-            <p className="text-lg text-gray-700 dark:text-gray-300 mb-12">
-              Более 1 000 000 рабочих мест автоматизировано на ERP-решениях
-              «1С», а общая численность персонала клиентов превышает 20
-              миллионов человек. Свыше 9000 предприятий уже стали пользователями
-              «1С:ERP Управление предприятием».
-            </p>
+           
 
             <section className="mb-12">
               <h2 className="text-2xl font-semibold text-gray-900 dark:text-white mb-6">
